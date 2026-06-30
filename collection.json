@@ -20,6 +20,33 @@
                 "workshop"
             ]
         },
+        "Pulsar ADC": {
+            "docname": "documentation/solutions/reference-designs/pulsar_adc/index",
+            "description": "",
+            "include": {
+                "documentation": {
+                    "solutions/reference-designs/pulsar_adc": {
+                        "name": "User guide"
+                    }
+                },
+                "hdl": {
+                    "projects/pulsar_adc": {
+                        "name": "HDL Project (pulsar_adc)"
+                    }
+                },
+                "no-OS": {
+                    "drivers/adc/pulsar_adc": {
+                        "name": "no-OS driver (pulsar_adc)"
+                    }
+                }
+            },
+            "image": "https://media.githubusercontent.com/media/jvelasc2/adi-documentation-fork/main/docs/solutions/reference-designs/pulsar_adc/images/10_lead_pulsar_revc.jpg",
+            "subtitle": "Evaluating 14-/16-/18-Bit ADCs from the 8/10 LEAD PulSAR Family",
+            "label": [
+                "eval",
+                "user-guide"
+            ]
+        },
         "EVAL-AD9434": {
             "docname": "documentation/solutions/reference-designs/eval-ad9434-fmc/index",
             "description": "",
@@ -77,33 +104,6 @@
                 "user-guide"
             ]
         },
-        "AD9084-FMCA-EBZ": {
-            "docname": "documentation/solutions/reference-designs/ad9084_ebz/index",
-            "description": "",
-            "include": {
-                "documentation": {
-                    "solutions/reference-designs/ad9084_ebz": {
-                        "name": "User guide"
-                    }
-                },
-                "hdl": {
-                    "projects/ad9084_ebz": {
-                        "name": "HDL Project (ad9084_ardz)"
-                    }
-                },
-                "linux": {
-                    "drivers/iio-trx-rf/ad9088": {
-                        "name": "Linux driver (ad9084)"
-                    }
-                }
-            },
-            "image": "https://media.githubusercontent.com/media/jvelasc2/adi-documentation-fork/main/docs/solutions/reference-designs/images/ad9084.png",
-            "subtitle": "Evaluating the Apollo MxFE Quad, 16-Bit, 28GSPS RF DAC and Quad, 12-Bit, 20 GSPS RF ADC",
-            "label": [
-                "eval",
-                "user-guide"
-            ]
-        },
         "EVAL-AD4050/AD4052-ARDZ": {
             "docname": "documentation/solutions/reference-designs/ad4052-ardz/index",
             "description": "",
@@ -153,6 +153,33 @@
             },
             "image": "https://media.githubusercontent.com/media/jvelasc2/adi-documentation-fork/main/docs/solutions/reference-designs/ad4062-ardz/eval-angle.png",
             "subtitle": "Evaluating the AD4060/AD4062 Compact, Low Power, 12-Bit/16-Bit, 2 MSPS Easy Drive SAR ADCs",
+            "label": [
+                "eval",
+                "user-guide"
+            ]
+        },
+        "AD9084-FMCA-EBZ": {
+            "docname": "documentation/solutions/reference-designs/ad9084_ebz/index",
+            "description": "",
+            "include": {
+                "documentation": {
+                    "solutions/reference-designs/ad9084_ebz": {
+                        "name": "User guide"
+                    }
+                },
+                "hdl": {
+                    "projects/ad9084_ebz": {
+                        "name": "HDL Project (ad9084_ardz)"
+                    }
+                },
+                "linux": {
+                    "drivers/iio-trx-rf/ad9088": {
+                        "name": "Linux driver (ad9084)"
+                    }
+                }
+            },
+            "image": "https://media.githubusercontent.com/media/jvelasc2/adi-documentation-fork/main/docs/solutions/reference-designs/images/ad9084.png",
+            "subtitle": "Evaluating the Apollo MxFE Quad, 16-Bit, 28GSPS RF DAC and Quad, 12-Bit, 20 GSPS RF ADC",
             "label": [
                 "eval",
                 "user-guide"
