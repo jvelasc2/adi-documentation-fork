@@ -1,0 +1,698 @@
+<!DOCTYPE html>
+
+<html lang="en" data-content_root="../../../">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+<meta content="Low-cost Battery Management System Reference Design for E2W/E3W Applications" name="description" />
+
+    <title>AD-BMSE2E3WLC-SL &#8212; System Level Documentation  documentation</title>
+    <link rel="stylesheet" type="text/css" href="../../../_static/pygments.css?v=8e8a900e" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/app.min.css?v=a8f9a170" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/custom.css?v=5f9cb17c" />
+    <script async="async" src="../../../_static/app.umd.js?v=26d0298f"></script>
+    <link rel="icon" href="../../../_static/icon.svg"/>
+    <link rel="index" title="Index" href="../../../genindex.html" />
+    <link rel="search" title="Search" href="../../../search.html" />
+    <link rel="next" title="Hardware Guide" href="hardware-guide/index.html" />
+    <link rel="prev" title="Reference Designs" href="../index.html" />
+   
+  
+  
+  
+  <meta name="repository" content="documentation">
+  <meta name="version" content="">
+  
+    <meta name="page_source_suffix" content=".rst">
+  
+  
+  
+
+
+<style>
+  body {
+    
+  }
+
+  body.dark {
+    
+  }
+
+  @media (prefers-color-scheme: dark) {
+    body:not(.light) {
+      
+    }
+  }
+</style>
+  </head>
+  
+    <body>
+  
+  <input type="checkbox" id="input-show-toc">
+  <input type="checkbox" id="input-show-localtoc">
+  <input type="checkbox" id="input-show-repotoc">
+
+  
+  <div class="search-area">
+    <form action="" method="get">
+      <input type="text" name="q" aria-labelledby="search-documentation" value="" autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" role="search" placeholder="Search"/>
+      <button class="icon"></button>
+    </form>
+  </div>
+  
+
+  <header>
+    <div id="left">
+      <label id="show-sidebar" class="icon" for="input-show-toc" title="Show/hide index"></label>
+    </div>
+    <div id="right">
+      <span>
+        <a id="logo-org" href="https://analog.com" aria-label="Analog Devices Inc. landing page"></a>
+        <div class="vertical-divider"></div>
+        
+        <label id="show-repotoc" for="input-show-repotoc" title="Show/hide docs">Docs</label>
+        
+        <a id="logo" href="../../../index.html">
+          <div>System Level</div>
+        </a>
+      </span>
+      <span class="reverse">
+        <label id="show-localtoc" class="icon" for="input-show-localtoc" title="Show/hide contents"></label>
+      </span>
+    </div>
+  </header>
+
+
+  <div class="repotoc-tree overlay">
+    <root>
+  <a href="../../../index.html" class="current">System Level</a>
+</root>
+
+  </div>
+    <div class="localtoc">
+      <div class="tocwrapper">
+        <div class="header localtoc-header">
+          <a id="scroll-up" href="#top-anchor" title="Back to top"></a>
+        </div>
+        <nav>
+          <ul>
+<li><a class="reference internal" href="#">AD-BMSE2E3WLC-SL</a><ul>
+<li><a class="reference internal" href="#overview">Overview</a></li>
+<li><a class="reference internal" href="#features">Features</a></li>
+<li><a class="reference internal" href="#applications">Applications</a></li>
+<li><a class="reference internal" href="#system-architecture">System Architecture</a></li>
+<li><a class="reference internal" href="#theory-of-operation">Theory of Operation</a></li>
+<li><a class="reference internal" href="#specifications">Specifications</a></li>
+<li><a class="reference internal" href="#package-contents">Package Contents</a></li>
+<li><a class="reference internal" href="#user-guides">User Guides</a></li>
+<li><a class="reference internal" href="#resources">Resources</a><ul>
+<li><a class="reference internal" href="#design-integration-files">Design &amp; Integration Files</a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#help-and-support">Help and Support</a></li>
+</ul>
+</li>
+</ul>
+
+        </nav>
+      </div>
+    </div>
+
+  
+      <div class="sphinxsidebar" role="navigation" aria-label="Main">
+        <div class="sphinxsidebarwrapper">
+    <a id="no-logo" href="../../../index.html">
+      System Level Documentation
+    </a><input id="input-switch-toc" type="checkbox">
+<label id="show-repotoc" for="input-switch-toc">
+All content
+</label>
+<label id="show-toc" for="input-switch-toc">
+Content on this topic
+</label>
+<div class="repotoc-tree">
+  <root>
+  <a href="../../../index.html" class="current">System Level</a>
+</root>
+
+</div>
+<div class="toc-tree">
+  <p class="caption" role="heading">
+  <span class="caption-text">Apps &amp; Solutions</span>
+</p>
+
+<ul class="current">
+<li class="toctree-l1 current"><input class="toctree-collapse" type="checkbox" name="toctree-collapse-1" id="toctree-collapse-1" checked=""/><div class="collapse"><a class="reference internal" href="../index.html">Reference Designs</a><label for="toctree-collapse-1"><div class="icon"></div></label></div><ul class="current">
+<li class="toctree-l2 current"><input class="toctree-collapse" type="checkbox" name="toctree-collapse-1-1" id="toctree-collapse-1-1" checked=""/><div class="collapse"><a class="current reference internal" href="#">AD-BMSE2E3WLC-SL</a><label for="toctree-collapse-1-1"><div class="icon"></div></label></div><ul>
+<li class="toctree-l3"><a class="reference internal" href="hardware-guide/index.html">Hardware Guide</a></li>
+<li class="toctree-l3"><a class="reference internal" href="software-guide/index.html">Software Guide</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+
+
+</div>
+        </div>
+      </div>
+
+  <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper" id="top-anchor">
+          <div class="body-header">
+  <nav class="breadcrumb"><ol><li><a href="../index.html">Reference Designs</a></li></ol></nav>
+</div>
+          <div class="body" role="main">
+            
+  <section id="ad-bmse2e3wlc-sl">
+<span id="id1"></span><h1>AD-BMSE2E3WLC-SL<a class="headerlink" href="#ad-bmse2e3wlc-sl" title="Link to this heading"></a></h1>
+<p>Low-cost Battery Management System Reference Design for E2W/E3W
+Applications</p>
+<section id="overview">
+<h2>Overview<a class="headerlink" href="#overview" title="Link to this heading"></a></h2>
+<figure class="align-default" id="id2">
+<a class="reference internal image-reference" href="https://media.githubusercontent.com/media/jvelasc2/adi-documentation-fork/ref-design/bmse2e3wlc/docs/solutions/reference-designs/ad-bmse2e3wlc-sl/AD-BMSE2E3WLC-SL_solution_kit.png"><img alt="https://media.githubusercontent.com/media/jvelasc2/adi-documentation-fork/ref-design/bmse2e3wlc/docs/solutions/reference-designs/ad-bmse2e3wlc-sl/AD-BMSE2E3WLC-SL_solution_kit.png" src="https://media.githubusercontent.com/media/jvelasc2/adi-documentation-fork/ref-design/bmse2e3wlc/docs/solutions/reference-designs/ad-bmse2e3wlc-sl/AD-BMSE2E3WLC-SL_solution_kit.png" style="width: 600px;" />
+</a>
+<figcaption>
+<p><span class="caption-number">Figure 1 </span><span class="caption-text">AD-BMSE2E3WLC-SL Solution Kit</span><a class="headerlink" href="#id2" title="Link to this image"></a></p>
+</figcaption>
+</figure>
+<p>The <a class="icon adi reference external" href="https://www.analog.com/AD-BMSE2E3WLC-SL" target="_blank">AD-BMSE2E3WLC-SL</a> is a cost-competitive system-level reference design
+for medium to high-end Battery Management System (BMS) applications in
+Electric 2-Wheeler (E2W) and Electric 3-Wheeler (E3W) markets. Operating
+within a voltage range of 36V to 96V and supporting currents up to 100A,
+this reference design leverages the automotive-grade ADBMS1816
+integrated circuit with comprehensive cell and current sensing
+capabilities.</p>
+<p>The system features built-in charge/discharge circuitry supporting both
+high-side and low-side current sensing. An integrated microcontroller
+unit (MCU) handles computational operations required for BMS
+functionality and provides USB-to-SPI communication for GUI interaction.
+The modular, stackable design offers flexibility to utilize
+customer-preferred MCUs through standard Arduino/Feather board form
+factors.</p>
+<p>The reference design includes firmware example codes and a comprehensive
+GUI, both available as open-source resources via GitHub, enabling rapid
+prototyping and evaluation of BMS solutions.</p>
+</section>
+<section id="features">
+<h2>Features<a class="headerlink" href="#features" title="Link to this heading"></a></h2>
+<p><strong>Wide Range BMS System</strong></p>
+<blockquote>
+<div><ul class="simple">
+<li><p>36V to 96V operation, up to 100A current handling</p></li>
+<li><p>Simplified E2W/E3W AD-BMSE2E3WLC-SL baseboard + EVAL-ADBMS1816WLC daughterboard configuration</p></li>
+</ul>
+</div></blockquote>
+<p><strong>Battery Chemistry Compatibility</strong></p>
+<blockquote>
+<div><ul class="simple">
+<li><p>Supports multiple battery chemistries: Ni-MH, Li-ion, LiFePO4,
+Sodium-Ion, and others</p></li>
+</ul>
+</div></blockquote>
+<p><strong>System Integration</strong></p>
+<blockquote>
+<div><ul class="simple">
+<li><p>Plug-and-Play integration</p></li>
+<li><p>MCU-agnostic design for easy integration into existing systems</p></li>
+<li><p>Flexible topology support: Centralized, Distributed, and Modular
+configurations</p></li>
+</ul>
+</div></blockquote>
+<p><strong>Monitoring Capabilities</strong></p>
+<blockquote>
+<div><ul class="simple">
+<li><p>Cell voltage accuracy: ±3.6mV</p></li>
+<li><p>Temperature monitoring: Up to 8 sensors</p></li>
+<li><p>SOC/SOH Coulomb counting</p></li>
+<li><p>High-side and low-side current sensing</p></li>
+</ul>
+</div></blockquote>
+<p><strong>Vehicle State Management</strong></p>
+<blockquote>
+<div><ul class="simple">
+<li><p>E2W/E3W vehicle state condition readiness</p></li>
+<li><p>Support for Driving, Charging, Parking, and Fault states</p></li>
+</ul>
+</div></blockquote>
+<p><strong>Connectivity and Software</strong></p>
+<blockquote>
+<div><ul class="simple">
+<li><p>Daisy-chaining ready for multi-board configurations</p></li>
+<li><p>Comprehensive GUI compatible with any PC/Laptop</p></li>
+<li><p>Integrated firmware and GUI software suite</p></li>
+<li><p>Real-time monitoring, diagnostics, and data plotting capabilities</p></li>
+<li><p>Open-source BMS example codes provided</p></li>
+</ul>
+</div></blockquote>
+</section>
+<section id="applications">
+<h2>Applications<a class="headerlink" href="#applications" title="Link to this heading"></a></h2>
+<blockquote>
+<div><ul class="simple">
+<li><p>Medium to High Performance Electric and Hybrid 2-Wheeler and 3-Wheeler Vehicles</p></li>
+<li><p>Light Electric Vehicles (LEVs)</p></li>
+<li><p>BMS Battery Research and Development</p></li>
+<li><p>Adaptive Battery Type System Monitoring</p></li>
+<li><p>Portable Energy Storage Systems</p></li>
+</ul>
+</div></blockquote>
+</section>
+<section id="system-architecture">
+<h2>System Architecture<a class="headerlink" href="#system-architecture" title="Link to this heading"></a></h2>
+<figure class="align-default" id="id3">
+<a class="reference internal image-reference" href="https://media.githubusercontent.com/media/jvelasc2/adi-documentation-fork/ref-design/bmse2e3wlc/docs/solutions/reference-designs/ad-bmse2e3wlc-sl/AD-BMSE2E3WLC-SL_block_diagram.png"><img alt="https://media.githubusercontent.com/media/jvelasc2/adi-documentation-fork/ref-design/bmse2e3wlc/docs/solutions/reference-designs/ad-bmse2e3wlc-sl/AD-BMSE2E3WLC-SL_block_diagram.png" src="https://media.githubusercontent.com/media/jvelasc2/adi-documentation-fork/ref-design/bmse2e3wlc/docs/solutions/reference-designs/ad-bmse2e3wlc-sl/AD-BMSE2E3WLC-SL_block_diagram.png" style="width: 600px;" />
+</a>
+<figcaption>
+<p><span class="caption-number">Figure 2 </span><span class="caption-text">AD-BMSE2E3WLC-SL System Block Diagram</span><a class="headerlink" href="#id3" title="Link to this image"></a></p>
+</figcaption>
+</figure>
+</section>
+<section id="theory-of-operation">
+<h2>Theory of Operation<a class="headerlink" href="#theory-of-operation" title="Link to this heading"></a></h2>
+<p>The <a class="icon adi reference external" href="https://www.analog.com/AD-BMSE2E3WLC-SL" target="_blank">AD-BMSE2E3WLC-SL</a> system combines battery cell monitoring, current
+sensing, temperature monitoring, charge/discharge control, and host
+communication into a scalable platform supporting battery packs from
+36V to 96V and up to 32 series-connected cells.</p>
+<p>At the core of the system is the <a class="icon adi reference external" href="https://www.analog.com/ADBMS1816W" target="_blank">ADBMS1816W</a> battery monitoring IC, which
+continuously measures individual cell voltages and temperature sensor
+inputs. Two <a class="icon adi reference external" href="https://www.analog.com/ADBMS1816W" target="_blank">ADBMS1816W</a> devices are used in a daisy-chain configuration
+to support up to 32 cells while maintaining high measurement accuracy
+and reducing communication wiring complexity through the isoSPI
+interface. Measured battery parameters are transmitted to the host
+microcontroller for processing and display.</p>
+<p>The <a class="icon adi reference external" href="https://www.analog.com/MAX32666FTHR" target="_blank">MAX32666FTHR</a> microcontroller serves as the system controller and
+communication gateway. It collects measurement data from the battery
+monitor devices, executes battery management functions such as SOC and
+SOH calculations, manages system operating states, and communicates with
+the PC-based GUI through a USB connection. The MCU-agnostic hardware
+architecture allows alternative processor platforms to be integrated
+through the Arduino and Feather-compatible interfaces.</p>
+<p>Battery pack current is monitored through precision shunt resistors
+located on the baseboard. The measured current information is used for
+coulomb counting, charge/discharge monitoring, and battery protection
+functions. The system supports both high-side and low-side
+current-sensing topologies, enabling flexibility for different battery
+pack architectures.</p>
+<p>Charge and discharge path control is implemented using external MOSFETs
+driven by the <a class="icon adi reference external" href="https://www.analog.com/LTC7000" target="_blank">LTC7000</a> gate driver. Based on battery conditions and
+operating state, the BMS can enable or disable power delivery to the
+load or charger. This allows implementation of vehicle operating modes
+such as Driving, Charging, Parking, and Fault conditions while
+protecting the battery pack from abnormal operating events.</p>
+<p>For evaluation purposes, the <a class="icon adi reference external" href="https://www.analog.com/AD-BMSE2E3WLC-SL" target="_blank">AD-BMSE2E3WLC-SL</a> can be connected to
+DC2472A battery emulators, allowing users to safely simulate battery
+cell voltages and observe system behavior through the graphical user
+interface. The GUI provides real-time monitoring of cell voltages, stack
+voltage, current, temperature measurements, and system status,
+facilitating rapid development and validation of battery management
+algorithms.</p>
+<p>This modular architecture enables rapid prototyping, evaluation, and
+customization of battery management solutions while providing a
+foundation that can be adapted for E2W, E3W, and other light electric
+vehicle applications.</p>
+</section>
+<section id="specifications">
+<h2>Specifications<a class="headerlink" href="#specifications" title="Link to this heading"></a></h2>
+<div class="table-wrapper docutils container">
+<table class="docutils align-default">
+<thead>
+<tr class="row-odd"><th class="head"><p><strong>Parameter</strong></p></th>
+<th class="head"><p>Min</p></th>
+<th class="head"><p>Typical</p></th>
+<th class="head"><p>Max</p></th>
+<th class="head"><p>Unit</p></th>
+<th class="head"><p><strong>Notes</strong></p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p><strong>System</strong></p></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr class="row-odd"><td><p>Total Vin+ Supply
+Voltage</p></td>
+<td><p>30</p></td>
+<td><ul class="simple">
+<li></li>
+</ul>
+</td>
+<td><p>100</p></td>
+<td><p>V</p></td>
+<td><p>Input voltage
+supply from
+battery</p></td>
+</tr>
+<tr class="row-even"><td><p>Battery Emulator
+Output</p></td>
+<td><p>30</p></td>
+<td><ul class="simple">
+<li></li>
+</ul>
+</td>
+<td><p>100</p></td>
+<td><p>V</p></td>
+<td><p>Safe output
+voltage from
+Battery Emulator</p></td>
+</tr>
+<tr class="row-odd"><td><p>Discharge Current</p></td>
+<td><ul class="simple">
+<li></li>
+</ul>
+</td>
+<td><p>40</p></td>
+<td><p>100</p></td>
+<td><p>A</p></td>
+<td><p>Current rating
+at discharge
+mode</p></td>
+</tr>
+<tr class="row-even"><td><p>Charge Current</p></td>
+<td><p>0.3</p></td>
+<td><p>40</p></td>
+<td><p>70</p></td>
+<td><p>A</p></td>
+<td><p>Current rating
+at charge mode</p></td>
+</tr>
+<tr class="row-odd"><td><p>Charge Voltage
+Input</p></td>
+<td><ul class="simple">
+<li></li>
+</ul>
+</td>
+<td><ul class="simple">
+<li></li>
+</ul>
+</td>
+<td><p>96</p></td>
+<td><p>V</p></td>
+<td></td>
+</tr>
+<tr class="row-even"><td><p>Discharge Voltage
+Output</p></td>
+<td><ul class="simple">
+<li></li>
+</ul>
+</td>
+<td><p>36</p></td>
+<td><p>96</p></td>
+<td><p>V</p></td>
+<td><p>Regulated
+voltage range</p></td>
+</tr>
+<tr class="row-odd"><td><p>FET Driver Charge
+Input</p></td>
+<td><ul class="simple">
+<li></li>
+</ul>
+</td>
+<td><ul class="simple">
+<li></li>
+</ul>
+</td>
+<td><p>5</p></td>
+<td><p>V</p></td>
+<td><p>From ADBMS1816W
+GPIO</p></td>
+</tr>
+<tr class="row-even"><td><p>FET Vgs Range</p></td>
+<td><p>-20</p></td>
+<td><ul class="simple">
+<li></li>
+</ul>
+</td>
+<td><p>20</p></td>
+<td><p>V</p></td>
+<td><p>From ADBMS1816W
+GPIO</p></td>
+</tr>
+<tr class="row-odd"><td><p>FET Rds(on)</p></td>
+<td><ul class="simple">
+<li></li>
+</ul>
+</td>
+<td><ul class="simple">
+<li></li>
+</ul>
+</td>
+<td><p>4.8</p></td>
+<td><p>mΩ</p></td>
+<td><p>From ADBMS1816W
+GPIO</p></td>
+</tr>
+<tr class="row-even"><td><p><strong>ADBMS1816W Cell
+Monitor</strong></p></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr class="row-odd"><td><p>VREG Supply</p></td>
+<td><p>4.5</p></td>
+<td><p>5</p></td>
+<td><p>5.5</p></td>
+<td><p>V</p></td>
+<td></td>
+</tr>
+<tr class="row-even"><td><p>VREF1, VREF2</p></td>
+<td><p>3</p></td>
+<td><ul class="simple">
+<li></li>
+</ul>
+</td>
+<td><p>3.3</p></td>
+<td><p>V</p></td>
+<td><p>Supply to
+internal ADCs</p></td>
+</tr>
+<tr class="row-odd"><td><p>VRES/VDD</p></td>
+<td><p>4.5</p></td>
+<td><p>5</p></td>
+<td><p>5.5</p></td>
+<td><p>V</p></td>
+<td></td>
+</tr>
+<tr class="row-even"><td><p>Operating
+Temperature</p></td>
+<td><p>-40</p></td>
+<td><ul class="simple">
+<li></li>
+</ul>
+</td>
+<td><p>125</p></td>
+<td><p>°C</p></td>
+<td></td>
+</tr>
+<tr class="row-odd"><td><p>CPIN Input Range</p></td>
+<td><p>-2.5</p></td>
+<td><ul class="simple">
+<li></li>
+</ul>
+</td>
+<td><p>5.5</p></td>
+<td><p>V</p></td>
+<td></td>
+</tr>
+<tr class="row-even"><td><p>Cell Count</p></td>
+<td><p>1</p></td>
+<td><ul class="simple">
+<li></li>
+</ul>
+</td>
+<td><p>32</p></td>
+<td><ul class="simple">
+<li></li>
+</ul>
+</td>
+<td><p>Minimum 17 cells
+to initiate
+daisy chain</p></td>
+</tr>
+<tr class="row-odd"><td><p>Drive Voltage Range</p></td>
+<td><p>-0.3</p></td>
+<td><ul class="simple">
+<li></li>
+</ul>
+</td>
+<td><p>6</p></td>
+<td><p>V</p></td>
+<td><p>Relative to each
+cell monitor V-</p></td>
+</tr>
+<tr class="row-even"><td><p>VP Range</p></td>
+<td><p>16</p></td>
+<td><ul class="simple">
+<li></li>
+</ul>
+</td>
+<td><p>80</p></td>
+<td><p>V</p></td>
+<td></td>
+</tr>
+<tr class="row-odd"><td><p>VREG Pack Monitor</p></td>
+<td><p>4.5</p></td>
+<td><p>5</p></td>
+<td><p>5.5</p></td>
+<td><p>V</p></td>
+<td></td>
+</tr>
+<tr class="row-even"><td><p><strong>MAX32666
+Microcontroller</strong></p></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr class="row-odd"><td><p>MCU Supply Voltage
+from BMS</p></td>
+<td><p>3.3</p></td>
+<td><ul class="simple">
+<li></li>
+</ul>
+</td>
+<td><p>5.5</p></td>
+<td><p>V</p></td>
+<td></td>
+</tr>
+<tr class="row-even"><td><p>MCU I/O Supply
+(1.8V)</p></td>
+<td><p>1.6</p></td>
+<td><ul class="simple">
+<li></li>
+</ul>
+</td>
+<td><p>3</p></td>
+<td><p>V</p></td>
+<td></td>
+</tr>
+<tr class="row-odd"><td><p>MCU VDD Supply</p></td>
+<td><p>3.3</p></td>
+<td><ul class="simple">
+<li></li>
+</ul>
+</td>
+<td><p>5.5</p></td>
+<td><p>V</p></td>
+<td></td>
+</tr>
+<tr class="row-even"><td><p>MCU Supply (1.2V)</p></td>
+<td><p>1.1</p></td>
+<td><ul class="simple">
+<li></li>
+</ul>
+</td>
+<td><p>1.35</p></td>
+<td><p>V</p></td>
+<td></td>
+</tr>
+<tr class="row-odd"><td><p>MCU Supply (1.0V)</p></td>
+<td><p>0.9</p></td>
+<td><ul class="simple">
+<li></li>
+</ul>
+</td>
+<td><p>1.2</p></td>
+<td><p>V</p></td>
+<td></td>
+</tr>
+</tbody>
+</table>
+</div>
+</section>
+<section id="package-contents">
+<h2>Package Contents<a class="headerlink" href="#package-contents" title="Link to this heading"></a></h2>
+<p>Upon purchase, the AD-BMSE2E3WLC-SL comes complete with 1 baseboard, 1 daughter
+board, and 1 microcontroller.</p>
+<p><strong>However, customers also have the option to avail of the components individually
+as intended for their application development.</strong></p>
+<blockquote>
+<div><ul class="simple">
+<li><p>1x AD-BMSE2E3WLC-48V Baseboard</p></li>
+<li><p>1x EVAL-ADBMS1816W Daughter Board</p></li>
+<li><p>1x MAX32666FTHR Microcontroller Board</p></li>
+<li><p>2x DC2472A Battery Emulator</p></li>
+<li><p>3x USB Cable for PC Connection</p></li>
+</ul>
+</div></blockquote>
+<figure class="align-default" id="id4">
+<a class="reference internal image-reference" href="https://media.githubusercontent.com/media/jvelasc2/adi-documentation-fork/ref-design/bmse2e3wlc/docs/solutions/reference-designs/ad-bmse2e3wlc-sl/package-contents.png"><img alt="https://media.githubusercontent.com/media/jvelasc2/adi-documentation-fork/ref-design/bmse2e3wlc/docs/solutions/reference-designs/ad-bmse2e3wlc-sl/package-contents.png" src="https://media.githubusercontent.com/media/jvelasc2/adi-documentation-fork/ref-design/bmse2e3wlc/docs/solutions/reference-designs/ad-bmse2e3wlc-sl/package-contents.png" style="width: 1000px;" />
+</a>
+<figcaption>
+<p><span class="caption-number">Figure 3 </span><span class="caption-text">AD-BMSE2E3WLC-SL Package Contents</span><a class="headerlink" href="#id4" title="Link to this image"></a></p>
+</figcaption>
+</figure>
+</section>
+<section id="user-guides">
+<h2>User Guides<a class="headerlink" href="#user-guides" title="Link to this heading"></a></h2>
+<p>Proceed to the following pages for detailed information on
+how to use the AD-BMSE2E3WLC-SL reference design:</p>
+<div class="toctree-wrapper compound">
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="hardware-guide/index.html">Hardware Guide</a></li>
+<li class="toctree-l1"><a class="reference internal" href="software-guide/index.html">Software Guide</a></li>
+</ul>
+</div>
+</section>
+<section id="resources">
+<h2>Resources<a class="headerlink" href="#resources" title="Link to this heading"></a></h2>
+<blockquote>
+<div><ul class="simple">
+<li><p><a class="icon adi reference external" href="https://www.analog.com/adbms1816" target="_blank">ADBMS1816 Product Page</a></p></li>
+<li><p><a class="icon adi reference external" href="https://www.analog.com/ltc7000" target="_blank">LTC7000 Product Page</a></p></li>
+<li><p><a class="icon adi reference external" href="https://www.analog.com/max32690" target="_blank">MAX32690 Product Page</a></p></li>
+<li><p><a class="icon adi reference external" href="https://www.analog.com/dc2472a" target="_blank">DC2472A Product Page</a></p></li>
+</ul>
+</div></blockquote>
+<section id="design-integration-files">
+<h3>Design &amp; Integration Files<a class="headerlink" href="#design-integration-files" title="Link to this heading"></a></h3>
+<div class="admonition-download admonition">
+<p class="admonition-title">Download</p>
+<p>AD-BMSE2E3WLC-SL Design Support Package {{ add link to product page download link }}</p>
+<ul class="simple">
+<li><p>Schematic</p></li>
+<li><p>PCB Layout</p></li>
+<li><p>Bill of Materials</p></li>
+<li><p>Allegro Project</p></li>
+</ul>
+</div>
+</section>
+</section>
+<section id="help-and-support">
+<h2>Help and Support<a class="headerlink" href="#help-and-support" title="Link to this heading"></a></h2>
+<p>For questions and more information, please visit the <a class="icon ez reference external" href="https://ez.analog.com/" target="_blank">EngineerZone Support Community</a>.</p>
+</section>
+</section>
+
+
+          </div>
+              <div class="related">
+                &nbsp;
+    <a href="../index.html" title="Previous document (Alt+Shift+LeftArrow)" class="prev">Reference Designs</a>
+    <a href="hardware-guide/index.html" title="Next document (Alt+Shift+RightArrow)" class="next">Hardware Guide</a>
+              </div>
+          
+        </div>
+      </div>
+  </div>
+
+  <label id="cancel-area-show-toc" for="input-show-toc"></label>
+  <label id="cancel-area-show-localtoc" for="input-show-localtoc"></label>
+    <footer>
+      &#169;2026, Analog Devices, Inc.
+      
+      |
+      Made with <a href="https://www.sphinx-doc.org/">Sphinx</a>
+      &amp; <a href="https://github.com/analogdevicesinc/doctools">Doctools</a>
+      
+    </footer>
+  </body>
+</html>

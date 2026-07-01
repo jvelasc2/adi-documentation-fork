@@ -1,0 +1,692 @@
+<!DOCTYPE html>
+
+<html lang="en" data-content_root="../../../../">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+<meta content="This page provides the essential steps for firmware installation, launching the GUI, establishing interface connections, and utilizing various tabs for effective device evaluation." name="description" />
+
+    <title>Software Guide &#8212; System Level Documentation  documentation</title>
+    <link rel="stylesheet" type="text/css" href="../../../../_static/pygments.css?v=8e8a900e" />
+    <link rel="stylesheet" type="text/css" href="../../../../_static/app.min.css?v=a8f9a170" />
+    <link rel="stylesheet" type="text/css" href="../../../../_static/custom.css?v=5f9cb17c" />
+    <script async="async" src="../../../../_static/app.umd.js?v=26d0298f"></script>
+    <link rel="icon" href="../../../../_static/icon.svg"/>
+    <link rel="index" title="Index" href="../../../../genindex.html" />
+    <link rel="search" title="Search" href="../../../../search.html" />
+    <link rel="prev" title="Hardware Guide" href="../hardware-guide/index.html" />
+   
+  
+  
+  
+  <meta name="repository" content="documentation">
+  <meta name="version" content="">
+  
+    <meta name="page_source_suffix" content=".rst">
+  
+  
+  
+
+
+<style>
+  body {
+    
+  }
+
+  body.dark {
+    
+  }
+
+  @media (prefers-color-scheme: dark) {
+    body:not(.light) {
+      
+    }
+  }
+</style>
+  </head>
+  
+    <body>
+  
+  <input type="checkbox" id="input-show-toc">
+  <input type="checkbox" id="input-show-localtoc">
+  <input type="checkbox" id="input-show-repotoc">
+
+  
+  <div class="search-area">
+    <form action="" method="get">
+      <input type="text" name="q" aria-labelledby="search-documentation" value="" autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" role="search" placeholder="Search"/>
+      <button class="icon"></button>
+    </form>
+  </div>
+  
+
+  <header>
+    <div id="left">
+      <label id="show-sidebar" class="icon" for="input-show-toc" title="Show/hide index"></label>
+    </div>
+    <div id="right">
+      <span>
+        <a id="logo-org" href="https://analog.com" aria-label="Analog Devices Inc. landing page"></a>
+        <div class="vertical-divider"></div>
+        
+        <label id="show-repotoc" for="input-show-repotoc" title="Show/hide docs">Docs</label>
+        
+        <a id="logo" href="../../../../index.html">
+          <div>System Level</div>
+        </a>
+      </span>
+      <span class="reverse">
+        <label id="show-localtoc" class="icon" for="input-show-localtoc" title="Show/hide contents"></label>
+      </span>
+    </div>
+  </header>
+
+
+  <div class="repotoc-tree overlay">
+    <root>
+  <a href="../../../../index.html" class="current">System Level</a>
+</root>
+
+  </div>
+    <div class="localtoc">
+      <div class="tocwrapper">
+        <div class="header localtoc-header">
+          <a id="scroll-up" href="#top-anchor" title="Back to top"></a>
+        </div>
+        <nav>
+          <ul>
+<li><a class="reference internal" href="#">Software Guide</a><ul>
+<li><a class="reference internal" href="#software-resources">Software Resources</a></li>
+<li><a class="reference internal" href="#firmware-upload">Firmware Upload</a></li>
+<li><a class="reference internal" href="#gui-setup">GUI Setup</a><ul>
+<li><a class="reference internal" href="#launching-and-configuring-the-gui">Launching and Configuring the GUI</a></li>
+<li><a class="reference internal" href="#gui-overview">GUI Overview</a><ul>
+<li><a class="reference internal" href="#main-dashboard-layout">Main Dashboard Layout</a></li>
+<li><a class="reference internal" href="#stack-voltage-gauge">Stack Voltage Gauge</a></li>
+<li><a class="reference internal" href="#vehicle-state-selection">Vehicle State Selection</a></li>
+<li><a class="reference internal" href="#temperature-sensors">Temperature Sensors</a></li>
+<li><a class="reference internal" href="#cell-voltage-monitoring">Cell Voltage Monitoring</a></li>
+<li><a class="reference internal" href="#visual-indicators">Visual Indicators</a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#functional-testing-using-gui">Functional Testing Using GUI</a><ul>
+<li><a class="reference internal" href="#voltage-adjustment-test">Voltage Adjustment Test</a></li>
+<li><a class="reference internal" href="#output-power-delivery-test">Output Power Delivery Test</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+
+        </nav>
+      </div>
+    </div>
+
+  
+      <div class="sphinxsidebar" role="navigation" aria-label="Main">
+        <div class="sphinxsidebarwrapper">
+    <a id="no-logo" href="../../../../index.html">
+      System Level Documentation
+    </a><input id="input-switch-toc" type="checkbox">
+<label id="show-repotoc" for="input-switch-toc">
+All content
+</label>
+<label id="show-toc" for="input-switch-toc">
+Content on this topic
+</label>
+<div class="repotoc-tree">
+  <root>
+  <a href="../../../../index.html" class="current">System Level</a>
+</root>
+
+</div>
+<div class="toc-tree">
+  <p class="caption" role="heading">
+  <span class="caption-text">Apps &amp; Solutions</span>
+</p>
+
+<ul class="current">
+<li class="toctree-l1 current"><input class="toctree-collapse" type="checkbox" name="toctree-collapse-1" id="toctree-collapse-1" checked=""/><div class="collapse"><a class="reference internal" href="../../index.html">Reference Designs</a><label for="toctree-collapse-1"><div class="icon"></div></label></div><ul class="current">
+<li class="toctree-l2 current"><input class="toctree-collapse" type="checkbox" name="toctree-collapse-1-1" id="toctree-collapse-1-1" checked=""/><div class="collapse"><a class="reference internal" href="../index.html">AD-BMSE2E3WLC-SL</a><label for="toctree-collapse-1-1"><div class="icon"></div></label></div><ul class="current">
+<li class="toctree-l3"><a class="reference internal" href="../hardware-guide/index.html">Hardware Guide</a></li>
+<li class="toctree-l3 current"><a class="current reference internal" href="#">Software Guide</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+
+
+</div>
+        </div>
+      </div>
+
+  <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper" id="top-anchor">
+          <div class="body-header">
+  <nav class="breadcrumb"><ol><li><a href="../../index.html">Reference Designs</a></li><li><a href="../index.html">AD-BMSE2E3WLC-SL</a></li></ol></nav>
+</div>
+          <div class="body" role="main">
+            
+  <section id="software-guide">
+<span id="ad-bmse2e3wlc-sl-software"></span><h1>Software Guide<a class="headerlink" href="#software-guide" title="Link to this heading"></a></h1>
+<p>This page provides the essential steps for firmware installation,
+launching the GUI, establishing interface connections, and utilizing
+various tabs for effective device evaluation.</p>
+<section id="software-resources">
+<h2>Software Resources<a class="headerlink" href="#software-resources" title="Link to this heading"></a></h2>
+<div class="admonition-download admonition">
+<p class="admonition-title">Download</p>
+<p>The following software is used for testing the AD-BMSE2E3WLC-SL:</p>
+<ul class="simple">
+<li><p><a class="icon adi reference external" href="https://www.analog.com/ace" target="_blank">ACE Software</a></p></li>
+<li><p>AD-BMSE2E3WLC-SL GUI Firmware - <strong>bms_measurement-max32665-iio-2x-adbms1816.hex</strong></p></li>
+<li><p>AD-BMSE2E3WLC-SL ACE GUI Plugin Installer - <strong>ADBMSE2E3WLC.1.2026.2041058-dev</strong></p></li>
+<li><p>MAX32625PICO Image - <strong>max32625_max32666fthr_if_crc_swd_v1.0.5</strong></p></li>
+</ul>
+</div>
+</section>
+<section id="firmware-upload">
+<h2>Firmware Upload<a class="headerlink" href="#firmware-upload" title="Link to this heading"></a></h2>
+<p><strong>Step 1: Hardware Connection</strong></p>
+<blockquote>
+<div><ul class="simple">
+<li><p>Connect the <strong>10-pin SWD ribbon cable</strong> to the MAX32666FTHR.</p></li>
+<li><p>Connect the other end to the <strong>MAX32625PICO.</strong></p></li>
+<li><p>Connect the MAX32625PICO to your PC using a <strong>micro-USB cable.</strong></p></li>
+</ul>
+</div></blockquote>
+<p><strong>Step 2: Upload Firmware</strong></p>
+<blockquote>
+<div><ul class="simple">
+<li><p>From the software package, locate the <strong>MAX32625_PICO.bin</strong> file.</p></li>
+<li><p>Drag and drop it into the <strong>MAINTENANCE</strong> folder of the connected
+MAX32625PICO.</p></li>
+<li><p>A progress bar indicates installation progress.</p></li>
+</ul>
+<blockquote>
+<div><figure class="align-default" id="id1">
+<img alt="https://media.githubusercontent.com/media/jvelasc2/adi-documentation-fork/ref-design/bmse2e3wlc/docs/solutions/reference-designs/ad-bmse2e3wlc-sl/software-guide/max32625_pico_bin_upload.png" src="https://media.githubusercontent.com/media/jvelasc2/adi-documentation-fork/ref-design/bmse2e3wlc/docs/solutions/reference-designs/ad-bmse2e3wlc-sl/software-guide/max32625_pico_bin_upload.png" />
+<figcaption>
+<p><span class="caption-number">Figure 1 </span><span class="caption-text">Uploading MAX32625_PICO.bin file</span><a class="headerlink" href="#id1" title="Link to this image"></a></p>
+</figcaption>
+</figure>
+</div></blockquote>
+<p><strong>Successful Installation Indicators:</strong></p>
+<ul class="simple">
+<li><p>Device renames to <strong>DAPLINK.</strong></p></li>
+<li><p>A <strong>MAX32666.HTM</strong> file appears in the folder.</p></li>
+</ul>
+</div></blockquote>
+<p><strong>Step 3: Upload Target Firmware</strong></p>
+<blockquote>
+<div><ul class="simple">
+<li><p>Connect the MAX32625PICO to the MAX32666FTHR.</p></li>
+<li><p>Ensure the MCU is powered via USB.</p></li>
+<li><p>Drag and drop the <strong>target firmware file</strong> (from the software package) into the DAPLINK drive.</p></li>
+</ul>
+</div></blockquote>
+<figure class="align-default" id="id2">
+<a class="reference internal image-reference" href="https://media.githubusercontent.com/media/jvelasc2/adi-documentation-fork/ref-design/bmse2e3wlc/docs/solutions/reference-designs/ad-bmse2e3wlc-sl/software-guide/firmware-upload.png"><img alt="https://media.githubusercontent.com/media/jvelasc2/adi-documentation-fork/ref-design/bmse2e3wlc/docs/solutions/reference-designs/ad-bmse2e3wlc-sl/software-guide/firmware-upload.png" src="https://media.githubusercontent.com/media/jvelasc2/adi-documentation-fork/ref-design/bmse2e3wlc/docs/solutions/reference-designs/ad-bmse2e3wlc-sl/software-guide/firmware-upload.png" style="width: 600px;" />
+</a>
+<figcaption>
+<p><span class="caption-number">Figure 2 </span><span class="caption-text">Uploading Target Firmware</span><a class="headerlink" href="#id2" title="Link to this image"></a></p>
+</figcaption>
+</figure>
+<p><strong>Verification:</strong></p>
+<blockquote>
+<div><ul class="simple">
+<li><p>The absence of a <strong>FAIL.TXT</strong> file in the DAPLINK folder indicates a successful upload.</p></li>
+</ul>
+</div></blockquote>
+</section>
+<hr class="docutils" />
+<section id="gui-setup">
+<h2>GUI Setup<a class="headerlink" href="#gui-setup" title="Link to this heading"></a></h2>
+<p><strong>Step 1: Download Required Files</strong></p>
+<blockquote>
+<div><ul class="simple">
+<li><p>Download the plugin package: <strong>Board.ADBMSE2E3WLC ACEZIP.zip</strong> (save locally)</p></li>
+<li><p>Download the latest <a class="icon adi reference external" href="https://www.analog.com/ace" target="_blank">ACE software</a> from Analog Devices.</p></li>
+</ul>
+<figure class="align-default" id="id3">
+<img alt="https://media.githubusercontent.com/media/jvelasc2/adi-documentation-fork/ref-design/bmse2e3wlc/docs/solutions/reference-designs/ad-bmse2e3wlc-sl/software-guide/ace-software-download.png" src="https://media.githubusercontent.com/media/jvelasc2/adi-documentation-fork/ref-design/bmse2e3wlc/docs/solutions/reference-designs/ad-bmse2e3wlc-sl/software-guide/ace-software-download.png" />
+<figcaption>
+<p><span class="caption-number">Figure 3 </span><span class="caption-text">ACE Software Download</span><a class="headerlink" href="#id3" title="Link to this image"></a></p>
+</figcaption>
+</figure>
+</div></blockquote>
+<p><strong>Step 2: Install ACE Software</strong></p>
+<blockquote>
+<div><ul class="simple">
+<li><p>Run the installer.</p></li>
+<li><p>Follow on-screen installation steps, as shown in the following
+figures:</p></li>
+</ul>
+<figure class="align-default" id="id4">
+<img alt="https://media.githubusercontent.com/media/jvelasc2/adi-documentation-fork/ref-design/bmse2e3wlc/docs/solutions/reference-designs/ad-bmse2e3wlc-sl/software-guide/ace-software-installation.png" src="https://media.githubusercontent.com/media/jvelasc2/adi-documentation-fork/ref-design/bmse2e3wlc/docs/solutions/reference-designs/ad-bmse2e3wlc-sl/software-guide/ace-software-installation.png" />
+<figcaption>
+<p><span class="caption-number">Figure 4 </span><span class="caption-text">ACE Software Installation Steps</span><a class="headerlink" href="#id4" title="Link to this image"></a></p>
+</figcaption>
+</figure>
+<ul class="simple">
+<li><p>Verify installation via the Start Menu.</p></li>
+</ul>
+<figure class="align-center" id="id5">
+<img alt="https://media.githubusercontent.com/media/jvelasc2/adi-documentation-fork/ref-design/bmse2e3wlc/docs/solutions/reference-designs/ad-bmse2e3wlc-sl/software-guide/ace-on-start-menu.png" src="https://media.githubusercontent.com/media/jvelasc2/adi-documentation-fork/ref-design/bmse2e3wlc/docs/solutions/reference-designs/ad-bmse2e3wlc-sl/software-guide/ace-on-start-menu.png" />
+<figcaption>
+<p><span class="caption-number">Figure 5 </span><span class="caption-text">ACE Software Start Menu Verification</span><a class="headerlink" href="#id5" title="Link to this image"></a></p>
+</figcaption>
+</figure>
+</div></blockquote>
+<p><strong>Step 3: Load Plugin</strong></p>
+<blockquote>
+<div><blockquote>
+<div><ul class="simple">
+<li><p>Run the downloaded <code class="docutils literal notranslate"><span class="pre">ACEZIP</span> <span class="pre">file</span></code>.</p></li>
+<li><p>Accept the prompt warning about unapproved EULA plugins.</p></li>
+</ul>
+<figure class="align-default">
+<a class="reference internal image-reference" href="https://media.githubusercontent.com/media/jvelasc2/adi-documentation-fork/ref-design/bmse2e3wlc/docs/solutions/reference-designs/ad-bmse2e3wlc-sl/software-guide/plugin-TOU.png"><img alt="https://media.githubusercontent.com/media/jvelasc2/adi-documentation-fork/ref-design/bmse2e3wlc/docs/solutions/reference-designs/ad-bmse2e3wlc-sl/software-guide/plugin-TOU.png" src="https://media.githubusercontent.com/media/jvelasc2/adi-documentation-fork/ref-design/bmse2e3wlc/docs/solutions/reference-designs/ad-bmse2e3wlc-sl/software-guide/plugin-TOU.png" style="width: 500px;" />
+</a>
+</figure>
+<ul class="simple">
+<li><p>Continue to load the plugin.</p></li>
+</ul>
+</div></blockquote>
+<figure class="align-default" id="id6">
+<img alt="https://media.githubusercontent.com/media/jvelasc2/adi-documentation-fork/ref-design/bmse2e3wlc/docs/solutions/reference-designs/ad-bmse2e3wlc-sl/software-guide/ACEZIP-file.png" src="https://media.githubusercontent.com/media/jvelasc2/adi-documentation-fork/ref-design/bmse2e3wlc/docs/solutions/reference-designs/ad-bmse2e3wlc-sl/software-guide/ACEZIP-file.png" />
+<figcaption>
+<p><span class="caption-number">Figure 6 </span><span class="caption-text">BMSE2E3WLC-SL Plugin</span><a class="headerlink" href="#id6" title="Link to this image"></a></p>
+</figcaption>
+</figure>
+</div></blockquote>
+<section id="launching-and-configuring-the-gui">
+<h3>Launching and Configuring the GUI<a class="headerlink" href="#launching-and-configuring-the-gui" title="Link to this heading"></a></h3>
+<blockquote>
+<div><ul class="simple">
+<li><p>Power up the hardware setup again (connect all USB cables to the PC or to a USB hub).</p></li>
+<li><p>Launch ACE and <strong>double-click the plugin</strong>.</p></li>
+<li><p>Open <strong>Settings</strong> (highlighted in GUI).</p></li>
+</ul>
+<figure class="align-default" id="id7">
+<img alt="https://media.githubusercontent.com/media/jvelasc2/adi-documentation-fork/ref-design/bmse2e3wlc/docs/solutions/reference-designs/ad-bmse2e3wlc-sl/software-guide/ACE-homepage.png" src="https://media.githubusercontent.com/media/jvelasc2/adi-documentation-fork/ref-design/bmse2e3wlc/docs/solutions/reference-designs/ad-bmse2e3wlc-sl/software-guide/ACE-homepage.png" />
+<figcaption>
+<p><span class="caption-number">Figure 7 </span><span class="caption-text">ACE GUI Homepage</span><a class="headerlink" href="#id7" title="Link to this image"></a></p>
+</figcaption>
+</figure>
+</div></blockquote>
+<p><strong>Configure Serial Communication</strong></p>
+<blockquote>
+<div><ul class="simple">
+<li><p>Open <strong>Device Manager</strong> and note the <strong>COM port number</strong>.</p></li>
+</ul>
+<figure class="align-default" id="id8">
+<img alt="https://media.githubusercontent.com/media/jvelasc2/adi-documentation-fork/ref-design/bmse2e3wlc/docs/solutions/reference-designs/ad-bmse2e3wlc-sl/software-guide/device-manager-comport.png" src="https://media.githubusercontent.com/media/jvelasc2/adi-documentation-fork/ref-design/bmse2e3wlc/docs/solutions/reference-designs/ad-bmse2e3wlc-sl/software-guide/device-manager-comport.png" />
+<figcaption>
+<p><span class="caption-number">Figure 8 </span><span class="caption-text">Device Manager COM Port Detection</span><a class="headerlink" href="#id8" title="Link to this image"></a></p>
+</figcaption>
+</figure>
+</div></blockquote>
+<p>In ACE:</p>
+<ol class="arabic">
+<li><p>Go to <strong>Settings → Serial Ports</strong> and add the detected COM port.</p></li>
+<li><p>Set <strong>Protocol = IIO</strong>, then <code class="docutils literal notranslate"><span class="pre">Enable</span></code> the port.</p></li>
+<li><p>Click <code class="docutils literal notranslate"><span class="pre">OK</span></code>.</p>
+<blockquote>
+<div><figure class="align-default" id="id9">
+<img alt="https://media.githubusercontent.com/media/jvelasc2/adi-documentation-fork/ref-design/bmse2e3wlc/docs/solutions/reference-designs/ad-bmse2e3wlc-sl/software-guide/ace-serial-ports-config.png" src="https://media.githubusercontent.com/media/jvelasc2/adi-documentation-fork/ref-design/bmse2e3wlc/docs/solutions/reference-designs/ad-bmse2e3wlc-sl/software-guide/ace-serial-ports-config.png" />
+<figcaption>
+<p><span class="caption-number">Figure 9 </span><span class="caption-text">ACE Serial Port Settings</span><a class="headerlink" href="#id9" title="Link to this image"></a></p>
+</figcaption>
+</figure>
+</div></blockquote>
+</li>
+<li><p>Restart ACE.</p>
+<p>Expected Result: Plugin <strong>AD-BMSE2E3WLC-48V</strong> appears.</p>
+</li>
+</ol>
+</section>
+<hr class="docutils" />
+<section id="gui-overview">
+<h3>GUI Overview<a class="headerlink" href="#gui-overview" title="Link to this heading"></a></h3>
+<p>The AD-BMSE2E3WLC-SL GUI provides real-time monitoring of
+battery-pack parameters, cell voltages, current measurements,
+operating state, and temperature information. The dashboard is
+designed to provide a quick overview of battery health and
+system status during evaluation and testing.</p>
+<figure class="align-default" id="id10">
+<img alt="https://media.githubusercontent.com/media/jvelasc2/adi-documentation-fork/ref-design/bmse2e3wlc/docs/solutions/reference-designs/ad-bmse2e3wlc-sl/software-guide/AD-BMSE2E3WLC-SL_GUI.png" src="https://media.githubusercontent.com/media/jvelasc2/adi-documentation-fork/ref-design/bmse2e3wlc/docs/solutions/reference-designs/ad-bmse2e3wlc-sl/software-guide/AD-BMSE2E3WLC-SL_GUI.png" />
+<figcaption>
+<p><span class="caption-number">Figure 10 </span><span class="caption-text">AD-BMSE2E3WLC-SL GUI</span><a class="headerlink" href="#id10" title="Link to this image"></a></p>
+</figcaption>
+</figure>
+<section id="main-dashboard-layout">
+<h4>Main Dashboard Layout<a class="headerlink" href="#main-dashboard-layout" title="Link to this heading"></a></h4>
+<p>The GUI is divided into three primary sections:</p>
+<ol class="arabic simple">
+<li><p>System Status Indicators (Top Middle Section)</p></li>
+<li><p>Vehicle State and Temperature Monitoring (Top Right Section)</p></li>
+<li><p>Individual Cell Voltage Monitoring (Bottom Section)</p></li>
+</ol>
+</section>
+<section id="stack-voltage-gauge">
+<h4>Stack Voltage Gauge<a class="headerlink" href="#stack-voltage-gauge" title="Link to this heading"></a></h4>
+<p>The <strong>Stack Voltage</strong> gauge displays the total voltage of the
+battery pack.</p>
+<blockquote>
+<div><p>Purpose</p>
+<ul class="simple">
+<li><p>Monitors overall pack voltage.</p></li>
+<li><p>Confirms proper connectivity of all battery cells.</p></li>
+<li><p>Verifies battery charging and discharging behavior.</p></li>
+</ul>
+<p>Displayed Information:</p>
+<ul class="simple">
+<li><p>Real-time pack voltage value.</p></li>
+<li><p>Green indicator showing normal operation.</p></li>
+<li><p>Gauge range covering the supported battery stack voltage.</p></li>
+</ul>
+<p>Example</p>
+<ul class="simple">
+<li><p>Displayed value: <strong>86.70V</strong></p></li>
+</ul>
+</div></blockquote>
+<p><strong>Module Current Gauge</strong></p>
+<p>The <strong>Module Current</strong> gauge displays the instantaneous battery
+current.</p>
+<blockquote>
+<div><p>Purpose</p>
+<ul class="simple">
+<li><p>Indicates whether the battery is charging or discharging.</p></li>
+<li><p>Monitors load current and charging current.</p></li>
+</ul>
+<p>Current Direction</p>
+<ul class="simple">
+<li><p>Positive (+) Current: Charging</p></li>
+<li><p>Negative (-) Current: Discharging</p></li>
+</ul>
+<p>Example</p>
+<ul class="simple">
+<li><p>Displayed value: <strong>-1.95A</strong></p></li>
+<li><p>Indicates the battery is supplying current to a load.</p></li>
+</ul>
+</div></blockquote>
+<p><strong>Max Charge Current Gauge</strong></p>
+<p>The <strong>Max Charge Current</strong> gauge displays the allowable charging
+current configured by the BMS.</p>
+<blockquote>
+<div><p>Purpose</p>
+<ul class="simple">
+<li><p>Indicates the maximum current permitted during charging.</p></li>
+<li><p>May be limited by battery conditions, temperature, or safety
+requirements.</p></li>
+</ul>
+<p>Monitoring Use</p>
+<ul class="simple">
+<li><p>Verify charging limits before connecting a charger.</p></li>
+<li><p>Validate BMS protection settings.</p></li>
+</ul>
+<p>Example</p>
+<ul class="simple">
+<li><p>Displayed value: <strong>0A</strong></p></li>
+</ul>
+</div></blockquote>
+<p><strong>Max Discharge Current Gauge</strong></p>
+<p>The <strong>Max Discharge Current</strong> gauge displays the allowable
+discharge current.</p>
+<blockquote>
+<div><p>Purpose</p>
+<ul class="simple">
+<li><p>Indicates the maximum current available to the load.</p></li>
+<li><p>Helps validate discharge protection behavior.</p></li>
+</ul>
+<p>Monitoring Use</p>
+<ul class="simple">
+<li><p>Verify discharge capability during driving conditions.</p></li>
+<li><p>Observe current-limit changes caused by faults or temperature
+restrictions.</p></li>
+</ul>
+<p>Example</p>
+<ul class="simple">
+<li><p>Displayed value: <strong>1.95A</strong></p></li>
+</ul>
+</div></blockquote>
+</section>
+<section id="vehicle-state-selection">
+<h4>Vehicle State Selection<a class="headerlink" href="#vehicle-state-selection" title="Link to this heading"></a></h4>
+<p>The <strong>Vehicle State</strong> panel allows the user to select and
+monitor the current operating mode.</p>
+<p>Available States:</p>
+<div class="table-wrapper docutils container">
+<table class="docutils align-default">
+<thead>
+<tr class="row-odd"><th class="head"><p>State</p></th>
+<th class="head"><p>Description</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>Parked</p></td>
+<td><p>Low-activity mode; output path disabled or
+limited.</p></td>
+</tr>
+<tr class="row-odd"><td><p>Driving</p></td>
+<td><p>Vehicle is actively supplying power to the load.</p></td>
+</tr>
+<tr class="row-even"><td><p>Charging</p></td>
+<td><p>Battery is connected to a charging source.</p></td>
+</tr>
+<tr class="row-odd"><td><p>Fault</p></td>
+<td><p>System enters protection mode due to an
+abnormal condition.</p></td>
+</tr>
+</tbody>
+</table>
+</div>
+<p>Purpose</p>
+<p>Vehicle states control the behavior of the BMS and allow users
+to evaluate operating-state transitions during system testing.</p>
+</section>
+<section id="temperature-sensors">
+<h4>Temperature Sensors<a class="headerlink" href="#temperature-sensors" title="Link to this heading"></a></h4>
+<p>The <strong>Temperature Sensors</strong> section displays temperature
+measurements from connected thermistors.</p>
+<blockquote>
+<div><p>Displayed Information</p>
+<ul class="simple">
+<li><p>BMS 1 temperature channels</p></li>
+<li><p>BMS 2 temperature channels</p></li>
+</ul>
+<p>Purpose</p>
+<ul class="simple">
+<li><p>Monitor battery-pack temperature.</p></li>
+<li><p>Verify thermistor operation.</p></li>
+<li><p>Evaluate thermal protection functionality.</p></li>
+</ul>
+<p>Typical Applications</p>
+<ul class="simple">
+<li><p>Overtemperature testing</p></li>
+<li><p>Thermal characterization</p></li>
+</ul>
+</div></blockquote>
+</section>
+<section id="cell-voltage-monitoring">
+<h4>Cell Voltage Monitoring<a class="headerlink" href="#cell-voltage-monitoring" title="Link to this heading"></a></h4>
+<p>The lower section of the GUI displays individual cell voltages
+for each monitored battery cell.</p>
+<blockquote>
+<div><p><strong>BMS 1 Cell Monitor</strong></p>
+<ul class="simple">
+<li><p>Cells 1 to 16</p></li>
+<li><p>Individual voltage readings</p></li>
+<li><p>Battery charge indicators</p></li>
+</ul>
+<p><strong>BMS 2 Cell Monitor</strong></p>
+<ul class="simple">
+<li><p>Cells 1 to 16</p></li>
+<li><p>Individual voltage readings</p></li>
+<li><p>Battery charge indicators</p></li>
+</ul>
+</div></blockquote>
+</section>
+<section id="visual-indicators">
+<h4>Visual Indicators<a class="headerlink" href="#visual-indicators" title="Link to this heading"></a></h4>
+<div class="table-wrapper docutils container">
+<table class="docutils align-default">
+<thead>
+<tr class="row-odd"><th class="head"><p>Indicator</p></th>
+<th class="head"><p>Meaning</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>Green Check Mark</p></td>
+<td><p>Parameter or cell voltage is within
+the normal operating range.</p></td>
+</tr>
+<tr class="row-odd"><td><p>Battery Icon</p></td>
+<td><p>Visual representation of the cell
+level or status.</p></td>
+</tr>
+<tr class="row-even"><td><p>Green Battery Level</p></td>
+<td><p>Cell voltage is present and measured
+successfully.</p></td>
+</tr>
+<tr class="row-odd"><td><p>Voltage Reading</p></td>
+<td><p>Actual measured cell voltage value.</p></td>
+</tr>
+<tr class="row-even"><td><p>Gauge Pointer in Green
+Region</p></td>
+<td><p>Measurement is within expected
+operating limits.</p></td>
+</tr>
+<tr class="row-odd"><td><p>Fault State Selected</p></td>
+<td><p>Protective action is active or a
+fault condition has been detected.</p></td>
+</tr>
+</tbody>
+</table>
+</div>
+<p>The dashboard serves as the primary real-time monitoring
+interface for validating pack voltage, current flow, cell
+voltages, temperatures, and operating-state transitions during
+AD-BMSE2E3WLC-SL evaluation.</p>
+</section>
+</section>
+<section id="functional-testing-using-gui">
+<h3>Functional Testing Using GUI<a class="headerlink" href="#functional-testing-using-gui" title="Link to this heading"></a></h3>
+<section id="voltage-adjustment-test">
+<h4>Voltage Adjustment Test<a class="headerlink" href="#voltage-adjustment-test" title="Link to this heading"></a></h4>
+<p><strong>Minimum Voltage Test</strong></p>
+<ol class="arabic">
+<li><p>Rotate both DC2472A knobs <strong>clockwise (for minimum setting)</strong></p></li>
+<li><p>Expected readings:</p>
+<blockquote>
+<div><blockquote>
+<div><ul class="simple">
+<li><p>Cell voltage: <strong>1.3V to 1.7V</strong></p></li>
+<li><p>Stack voltage: decreases</p></li>
+</ul>
+</div></blockquote>
+<figure class="align-default" id="id11">
+<img alt="https://media.githubusercontent.com/media/jvelasc2/adi-documentation-fork/ref-design/bmse2e3wlc/docs/solutions/reference-designs/ad-bmse2e3wlc-sl/software-guide/minimum-voltage-test.png" src="https://media.githubusercontent.com/media/jvelasc2/adi-documentation-fork/ref-design/bmse2e3wlc/docs/solutions/reference-designs/ad-bmse2e3wlc-sl/software-guide/minimum-voltage-test.png" />
+<figcaption>
+<p><span class="caption-number">Figure 11 </span><span class="caption-text">AD-BMSE2E3WLC-SL Minimum Voltage Test</span><a class="headerlink" href="#id11" title="Link to this image"></a></p>
+</figcaption>
+</figure>
+</div></blockquote>
+</li>
+</ol>
+<p><strong>Maximum Voltage Test</strong></p>
+<ol class="arabic">
+<li><p>Rotate both DC2472A knobs <strong>counterclockwise (for maximum setting)</strong></p></li>
+<li><p>Expected readings:</p>
+<blockquote>
+<div><ul class="simple">
+<li><p>Cell voltage: <strong>4.0V to 5.0V</strong></p></li>
+<li><p>Stack voltage: increases</p></li>
+</ul>
+<figure class="align-default" id="id12">
+<img alt="https://media.githubusercontent.com/media/jvelasc2/adi-documentation-fork/ref-design/bmse2e3wlc/docs/solutions/reference-designs/ad-bmse2e3wlc-sl/software-guide/maximum-voltage-test.png" src="https://media.githubusercontent.com/media/jvelasc2/adi-documentation-fork/ref-design/bmse2e3wlc/docs/solutions/reference-designs/ad-bmse2e3wlc-sl/software-guide/maximum-voltage-test.png" />
+<figcaption>
+<p><span class="caption-number">Figure 12 </span><span class="caption-text">AD-BMSE2E3WLC-SL Maximum Voltage Test</span><a class="headerlink" href="#id12" title="Link to this image"></a></p>
+</figcaption>
+</figure>
+</div></blockquote>
+<p>You may adjust one emulator at a time to observe changes clearly.</p>
+</li>
+</ol>
+</section>
+<hr class="docutils" />
+<section id="output-power-delivery-test">
+<h4>Output Power Delivery Test<a class="headerlink" href="#output-power-delivery-test" title="Link to this heading"></a></h4>
+<p>Measure using a <strong>Digital Multimeter (DMM)</strong>:</p>
+<blockquote>
+<div><blockquote>
+<div><ul class="simple">
+<li><p>Connect <strong>DMM (–)</strong> to <strong>Ground</strong>.</p></li>
+<li><p>Connect <strong>DMM (+)</strong> to <strong>TP23</strong>.</p></li>
+</ul>
+</div></blockquote>
+<p>Expected reading: <strong>4.0V to 4.7V</strong></p>
+<p>Notice that output “Stack Voltage” is at <strong>94.43V</strong> while the DMM reading is at <strong>4.3V.</strong></p>
+</div></blockquote>
+<p>In GUI:</p>
+<blockquote>
+<div><ul class="simple">
+<li><p>Set <strong>Vehicle State = Driving</strong>.</p></li>
+<li><p>Verify voltage again.</p></li>
+</ul>
+<figure class="align-default" id="id13">
+<img alt="https://media.githubusercontent.com/media/jvelasc2/adi-documentation-fork/ref-design/bmse2e3wlc/docs/solutions/reference-designs/ad-bmse2e3wlc-sl/software-guide/driving-mode-pd.png" src="https://media.githubusercontent.com/media/jvelasc2/adi-documentation-fork/ref-design/bmse2e3wlc/docs/solutions/reference-designs/ad-bmse2e3wlc-sl/software-guide/driving-mode-pd.png" />
+<figcaption>
+<p><span class="caption-number">Figure 13 </span><span class="caption-text">AD-BMSE2E3WLC-SL Power Delivery Test “Driving” Mode</span><a class="headerlink" href="#id13" title="Link to this image"></a></p>
+</figcaption>
+</figure>
+<p><strong>Vehicle State = Parked</strong></p>
+<figure class="align-default" id="id14">
+<img alt="https://media.githubusercontent.com/media/jvelasc2/adi-documentation-fork/ref-design/bmse2e3wlc/docs/solutions/reference-designs/ad-bmse2e3wlc-sl/software-guide/parked-mode-pd.png" src="https://media.githubusercontent.com/media/jvelasc2/adi-documentation-fork/ref-design/bmse2e3wlc/docs/solutions/reference-designs/ad-bmse2e3wlc-sl/software-guide/parked-mode-pd.png" />
+<figcaption>
+<p><span class="caption-number">Figure 14 </span><span class="caption-text">AD-BMSE2E3WLC-SL Power Delivery Test “Parked” Mode</span><a class="headerlink" href="#id14" title="Link to this image"></a></p>
+</figcaption>
+</figure>
+</div></blockquote>
+<p><strong>Shutdown Procedure</strong></p>
+<p>Follow this sequence to safely power down:</p>
+<ol class="arabic simple">
+<li><p>Disconnect power from MAX32666FTHR microcontroller.</p></li>
+<li><p>Disconnect power from both DC2472A battery cell emulators.</p></li>
+<li><p>Remove all cables.</p></li>
+<li><p>Return hardware to proper storage.</p></li>
+</ol>
+</section>
+</section>
+</section>
+</section>
+
+
+          </div>
+              <div class="related">
+                &nbsp;
+    <a href="../hardware-guide/index.html" title="Previous document (Alt+Shift+LeftArrow)" class="prev">Hardware Guide</a>
+    <div></div>
+              </div>
+          
+        </div>
+      </div>
+  </div>
+
+  <label id="cancel-area-show-toc" for="input-show-toc"></label>
+  <label id="cancel-area-show-localtoc" for="input-show-localtoc"></label>
+    <footer>
+      &#169;2026, Analog Devices, Inc.
+      
+      |
+      Made with <a href="https://www.sphinx-doc.org/">Sphinx</a>
+      &amp; <a href="https://github.com/analogdevicesinc/doctools">Doctools</a>
+      
+    </footer>
+  </body>
+</html>
