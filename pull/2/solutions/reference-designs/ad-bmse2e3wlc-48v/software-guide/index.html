@@ -180,7 +180,6 @@ various tabs for effective device evaluation.</p>
 <h2>Software Resources<a class="headerlink" href="#software-resources" title="Link to this heading"></a></h2>
 <div class="admonition-download admonition">
 <p class="admonition-title">Download</p>
-<p>The following software is used for testing the AD-BMSE2E3WLC-48V:</p>
 <ul class="simple">
 <li><p><a class="icon adi reference external" href="https://www.analog.com/ace" target="_blank">ACE Software</a></p></li>
 <li><p>AD-BMSE2E3WLC-SL GUI Firmware - <strong>bms_measurement-max32665-iio-2x-adbms1816.hex</strong></p></li>
@@ -194,9 +193,9 @@ various tabs for effective device evaluation.</p>
 <p><strong>Step 1: Hardware Connection</strong></p>
 <blockquote>
 <div><ul class="simple">
-<li><p>Connect the <strong>10-pin SWD ribbon cable</strong> to the MAX32666FTHR.</p></li>
+<li><p>Connect the <strong>10-pin SWD ribbon cable</strong> to the <strong>MAX32666FTHR</strong>.</p></li>
 <li><p>Connect the other end of the ribbon cable to the <strong>MAX32625PICO.</strong></p></li>
-<li><p>Connect the MAX32625PICO to your PC using a <strong>micro-USB cable.</strong></p></li>
+<li><p>Connect the <strong>MAX32625PICO</strong> to your PC using a <strong>micro-USB cable.</strong></p></li>
 </ul>
 </div></blockquote>
 <p><strong>Step 2: Upload Firmware</strong></p>
@@ -217,7 +216,7 @@ MAX32625PICO.</p></li>
 </div></blockquote>
 <p><strong>Successful Installation Indicators:</strong></p>
 <ul class="simple">
-<li><p>Device renames to <strong>DAPLINK.</strong></p></li>
+<li><p>Device renames to <strong>DAPLink.</strong></p></li>
 <li><p>A <strong>MAX32666.HTM</strong> file appears in the folder.</p></li>
 </ul>
 <figure class="align-default" id="id2">
@@ -234,20 +233,18 @@ MAX32625PICO.</p></li>
 <li><p>Ensure the MAX32666FTHR MCU is powered via USB.</p></li>
 <li><p>Drag and drop the <strong>target firmware file</strong> (from the software package) into the DAPLink drive.</p></li>
 </ul>
-</div></blockquote>
 <figure class="align-default" id="id3">
 <a class="reference internal image-reference" href="https://media.githubusercontent.com/media/jvelasc2/adi-documentation-fork/bmse2e3wlc-48v/docs/solutions/reference-designs/ad-bmse2e3wlc-48v/software-guide/firmware-upload.png"><img alt="https://media.githubusercontent.com/media/jvelasc2/adi-documentation-fork/bmse2e3wlc-48v/docs/solutions/reference-designs/ad-bmse2e3wlc-48v/software-guide/firmware-upload.png" src="https://media.githubusercontent.com/media/jvelasc2/adi-documentation-fork/bmse2e3wlc-48v/docs/solutions/reference-designs/ad-bmse2e3wlc-48v/software-guide/firmware-upload.png" style="width: 600px;" />
 </a>
 <figcaption>
 <p><span class="caption-number">Figure 3 </span><span class="caption-text">Uploading Target Firmware</span><a class="headerlink" href="#id3" title="Link to this image"></a></p>
-<div class="legend">
+</figcaption>
+</figure>
 <p><strong>Verification:</strong></p>
 <ul class="simple">
 <li><p>The absence of a <strong>FAIL.TXT</strong> file in the DAPLINK folder indicates a successful upload.</p></li>
 </ul>
-</div>
-</figcaption>
-</figure>
+</div></blockquote>
 </section>
 <hr class="docutils" />
 <section id="gui-setup">
@@ -341,7 +338,7 @@ figures:</p></li>
 <ol class="arabic">
 <li><p>Go to <strong>Settings → Serial Ports</strong> and add the detected COM port.</p></li>
 <li><p>Set <strong>Protocol = IIO</strong>, then <code class="docutils literal notranslate"><span class="pre">Enable</span></code> the port.</p></li>
-<li><p>Click <code class="docutils literal notranslate"><span class="pre">OK</span></code>.</p>
+<li><p>Click <code class="docutils literal notranslate"><span class="pre">OK</span></code> to apply the settings.</p>
 <blockquote>
 <div><figure class="align-default" id="id10">
 <img alt="https://media.githubusercontent.com/media/jvelasc2/adi-documentation-fork/bmse2e3wlc-48v/docs/solutions/reference-designs/ad-bmse2e3wlc-48v/software-guide/ace-serial-ports-config.png" src="https://media.githubusercontent.com/media/jvelasc2/adi-documentation-fork/bmse2e3wlc-48v/docs/solutions/reference-designs/ad-bmse2e3wlc-48v/software-guide/ace-serial-ports-config.png" />
@@ -576,9 +573,8 @@ fault condition has been detected.</p></td>
 </table>
 </div>
 <p>The dashboard serves as the primary real-time monitoring
-interface for validating pack voltage, current flow, cell
-voltages, temperatures, and operating-state transitions during
-AD-BMSE2E3WLC-SL evaluation.</p>
+interface for validating pack voltage, current flow, cell voltages,
+temperatures, and operating-state transitions during evaluation.</p>
 </section>
 </section>
 <section id="functional-testing-using-gui">
@@ -622,6 +618,8 @@ AD-BMSE2E3WLC-SL evaluation.</p>
 </figure>
 </div></blockquote>
 <p>You may adjust one emulator at a time to observe changes clearly.</p>
+<blockquote>
+<div></div></blockquote>
 </li>
 </ol>
 </section>

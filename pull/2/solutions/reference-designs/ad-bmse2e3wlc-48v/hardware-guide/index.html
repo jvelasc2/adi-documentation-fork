@@ -177,7 +177,7 @@ Content on this topic
 <a class="reference internal image-reference" href="https://media.githubusercontent.com/media/jvelasc2/adi-documentation-fork/bmse2e3wlc-48v/docs/solutions/reference-designs/ad-bmse2e3wlc-48v/hardware-guide/baseboard-main-components.png"><img alt="https://media.githubusercontent.com/media/jvelasc2/adi-documentation-fork/bmse2e3wlc-48v/docs/solutions/reference-designs/ad-bmse2e3wlc-48v/hardware-guide/baseboard-main-components.png" src="https://media.githubusercontent.com/media/jvelasc2/adi-documentation-fork/bmse2e3wlc-48v/docs/solutions/reference-designs/ad-bmse2e3wlc-48v/hardware-guide/baseboard-main-components.png" style="width: 800px;" />
 </a>
 <figcaption>
-<p><span class="caption-number">Figure 1 </span><span class="caption-text">AD-BMSE2E3WLC-48V Baseboard Components</span><a class="headerlink" href="#id1" title="Link to this image"></a></p>
+<p><span class="caption-number">Figure 1 </span><span class="caption-text">AD-BMSE2E3WLC-48V Components</span><a class="headerlink" href="#id1" title="Link to this image"></a></p>
 </figcaption>
 </figure>
 <div class="table-wrapper docutils container">
@@ -320,6 +320,9 @@ Baseboard through the cell connector.</p>
 <li><p>Connect a 5V external power source to the DC2472A battery emulator (J1)
 using a USB cable. External power supply is recommended for adequate power.</p></li>
 <li><p>Alternatively, power it through a PC using a USB cable.</p>
+<div class="line-block">
+<div class="line"><br /></div>
+</div>
 <p><strong>Power Verification</strong></p>
 <p>After powering up:</p>
 <ul>
@@ -374,7 +377,7 @@ voltage. Record the measurement for each cell voltage (C1 to C16).</p>
 <li><p>Counterclockwise → highest voltage (4.0V to 4.5V)</p></li>
 </ul>
 <figure class="align-default" id="id6">
-<a class="reference internal image-reference" href="https://media.githubusercontent.com/media/jvelasc2/adi-documentation-fork/bmse2e3wlc-48v/docs/solutions/reference-designs/ad-bmse2e3wlc-48v/hardware-guide/emulator-potentiometer.png"><img alt="https://media.githubusercontent.com/media/jvelasc2/adi-documentation-fork/bmse2e3wlc-48v/docs/solutions/reference-designs/ad-bmse2e3wlc-48v/hardware-guide/emulator-potentiometer.png" src="https://media.githubusercontent.com/media/jvelasc2/adi-documentation-fork/bmse2e3wlc-48v/docs/solutions/reference-designs/ad-bmse2e3wlc-48v/hardware-guide/emulator-potentiometer.png" style="width: 600px;" />
+<a class="reference internal image-reference" href="https://media.githubusercontent.com/media/jvelasc2/adi-documentation-fork/bmse2e3wlc-48v/docs/solutions/reference-designs/ad-bmse2e3wlc-48v/hardware-guide/emulator-potentiometer.png"><img alt="https://media.githubusercontent.com/media/jvelasc2/adi-documentation-fork/bmse2e3wlc-48v/docs/solutions/reference-designs/ad-bmse2e3wlc-48v/hardware-guide/emulator-potentiometer.png" src="https://media.githubusercontent.com/media/jvelasc2/adi-documentation-fork/bmse2e3wlc-48v/docs/solutions/reference-designs/ad-bmse2e3wlc-48v/hardware-guide/emulator-potentiometer.png" style="width: 1000px;" />
 </a>
 <figcaption>
 <p><span class="caption-number">Figure 6 </span><span class="caption-text">DC2472A Battery Emulator Potentiometer</span><a class="headerlink" href="#id6" title="Link to this image"></a></p>
@@ -544,6 +547,7 @@ Point</p></th>
 </div></blockquote>
 <section id="eval-adbmse2e3wlc-daughterboard-setup">
 <h3>EVAL-ADBMSE2E3WLC Daughterboard Setup<a class="headerlink" href="#eval-adbmse2e3wlc-daughterboard-setup" title="Link to this heading"></a></h3>
+<p>From the list of required hardware, select the <strong>EVAL-ADBMS1816WLC Daughter Board</strong>.</p>
 <ul>
 <li><p>Ensure that the shunt connectors are properly configured for <strong>P17, P24,
 P34, P30, P18, and P35.</strong></p>
@@ -565,9 +569,6 @@ Daughter Board through the cell connector.</p>
 </figcaption>
 </figure>
 </li>
-<li><p>Connect a 5V external power source to the DC2472A emulator (J1) using a USB
-cable. External power supply is recommended for adequate power.</p></li>
-<li><p>Alternatively, power it through a PC using a USB cable.</p></li>
 </ul>
 </section>
 <section id="microcontroller-connection">
@@ -601,39 +602,40 @@ Baseboard through the Featherwing connector.</p>
 </section>
 <section id="cable-and-pc-connection">
 <h3>Cable and PC Connection<a class="headerlink" href="#cable-and-pc-connection" title="Link to this heading"></a></h3>
-<ol class="upperalpha">
-<li><p>Plug the micro-USB cable to the first DC2472A battery emulator
-that is connected to AD-BMSE2E3WLC-48V.</p></li>
-<li><p>Plug the micro-USB cable to the second DC2472A battery emulator
-that is connected to EVAL-ADBMS1816WLC.</p></li>
-<li><p>Plug the micro-USB cable into the MAX32666FTHR.</p></li>
-<li><p>Connect the 2-wire isoSPI cable from P10 of AD-BMSE2E3WLC-48V.</p></li>
-<li><p>Connect the other end of the 2-wire isoSPI cable to P10 of
-EVAL-ADBMS1816WLC.</p></li>
-<li><p>Connect all USB cables to a USB hub (preferred).</p>
 <blockquote>
-<div><div class="admonition note">
+<div><dl class="simple">
+<dt>(A). Plug the micro-USB cable to the first DC2472A battery emulator</dt><dd><p>that is connected to AD-BMSE2E3WLC-48V.</p>
+</dd>
+<dt>(B). Plug the micro-USB cable to the second DC2472A battery emulator</dt><dd><p>that is connected to EVAL-ADBMS1816WLC.</p>
+</dd>
+</dl>
+<p>(C). Plug the micro-USB cable into the MAX32666FTHR.</p>
+<p>(D). Connect the 2-wire isoSPI cable on P10 of AD-BMSE2E3WLC-48V.</p>
+<dl class="simple">
+<dt>(E). Connect the other end of the 2-wire isoSPI cable to P10 of</dt><dd><p>EVAL-ADBMS1816WLC.</p>
+</dd>
+</dl>
+<p>(F). Connect all USB cables to a USB hub (preferred).</p>
+<div class="admonition note">
 <p class="admonition-title">Note</p>
 <p>If your PC/laptop USB ports can supply ≥1 A, you may connect devices
 directly without a USB hub.</p>
 </div>
 </div></blockquote>
-</li>
-</ol>
 <p>Your setup should look like below:</p>
 <figure class="align-default" id="id12">
 <a class="reference internal image-reference" href="https://media.githubusercontent.com/media/jvelasc2/adi-documentation-fork/bmse2e3wlc-48v/docs/solutions/reference-designs/ad-bmse2e3wlc-48v/hardware-guide/full-integration-setup.png"><img alt="https://media.githubusercontent.com/media/jvelasc2/adi-documentation-fork/bmse2e3wlc-48v/docs/solutions/reference-designs/ad-bmse2e3wlc-48v/hardware-guide/full-integration-setup.png" src="https://media.githubusercontent.com/media/jvelasc2/adi-documentation-fork/bmse2e3wlc-48v/docs/solutions/reference-designs/ad-bmse2e3wlc-48v/hardware-guide/full-integration-setup.png" style="width: 600px;" />
 </a>
 <figcaption>
-<p><span class="caption-number">Figure 12 </span><span class="caption-text">AD-BMSE2E3WLC-48V Full Hardware Evaluation Setup</span><a class="headerlink" href="#id12" title="Link to this image"></a></p>
+<p><span class="caption-number">Figure 12 </span><span class="caption-text">Full Hardware Evaluation Setup</span><a class="headerlink" href="#id12" title="Link to this image"></a></p>
 </figcaption>
 </figure>
 <div class="line-block">
 <div class="line"><br /></div>
 </div>
-<p>The AD-BMSE2E3WLC-48V comes complete with firmware and easy-to-use application GUI.
-Access the software resources and see the setup procedure in the
-<a class="reference internal" href="../software-guide/index.html#ad-bmse2e3wlc-48v-software"><span class="std std-ref">AD-BMSE2E3WLC-48V Software User Guide</span></a>.</p>
+<p>The AD-BMSE2E3WLC-48V can be evaluated through the ACE GUI by running the AD-BMSE2E3WLC software package.</p>
+<p>Access the software resources and see the setup procedure in the
+<a class="reference internal" href="../software-guide/index.html#ad-bmse2e3wlc-48v-software"><span class="std std-ref">Software User Guide</span></a>.</p>
 </section>
 </section>
 </section>
