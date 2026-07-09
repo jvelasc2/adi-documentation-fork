@@ -1,0 +1,510 @@
+<!DOCTYPE html>
+
+<html lang="en" data-content_root="../../../../">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+<meta content="No." name="description" />
+
+    <title>Hardware Guide &#8212; System Level Documentation  documentation</title>
+    <link rel="stylesheet" type="text/css" href="../../../../_static/pygments.css?v=8e8a900e" />
+    <link rel="stylesheet" type="text/css" href="../../../../_static/app.min.css?v=d3f78147" />
+    <link rel="stylesheet" type="text/css" href="../../../../_static/custom.css?v=5f9cb17c" />
+    <script async="async" src="../../../../_static/app.umd.js?v=26d0298f"></script>
+    <link rel="icon" href="../../../../_static/icon.svg"/>
+    <link rel="index" title="Index" href="../../../../genindex.html" />
+    <link rel="search" title="Search" href="../../../../search.html" />
+    <link rel="next" title="Software Guide" href="../software-guide/index.html" />
+    <link rel="prev" title="EVAL-ADBMS1816WLC" href="../index.html" />
+   
+  
+  
+  
+  <meta name="repository" content="documentation">
+  <meta name="version" content="">
+  
+    <meta name="page_source_suffix" content=".rst">
+  
+  
+  
+
+
+<style>
+  body {
+    
+  }
+
+  body.dark {
+    
+  }
+
+  @media (prefers-color-scheme: dark) {
+    body:not(.light) {
+      
+    }
+  }
+</style>
+  </head>
+  
+    <body>
+  
+  <input type="checkbox" id="input-show-toc">
+  <input type="checkbox" id="input-show-localtoc">
+  <input type="checkbox" id="input-show-repotoc">
+
+  
+  <div class="search-area">
+    <form action="" method="get">
+      <input type="text" name="q" aria-labelledby="search-documentation" value="" autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" role="search" placeholder="Search"/>
+      <button class="icon"></button>
+    </form>
+  </div>
+  
+
+  <header>
+    <div id="left">
+      <label id="show-sidebar" class="icon" for="input-show-toc" title="Show/hide index"></label>
+    </div>
+    <div id="right">
+      <span>
+        <a id="logo-org" href="https://analog.com" aria-label="Analog Devices Inc. landing page"></a>
+        <div class="vertical-divider"></div>
+        
+        <label id="show-repotoc" for="input-show-repotoc" title="Show/hide docs">Docs</label>
+        
+        <a id="logo" href="../../../../index.html">
+          <div>System Level</div>
+        </a>
+      </span>
+      <span class="reverse">
+        <label id="show-localtoc" class="icon" for="input-show-localtoc" title="Show/hide contents"></label>
+      </span>
+    </div>
+  </header>
+
+
+  <div class="repotoc-tree overlay">
+    <root>
+  <a href="../../../../index.html" class="current">System Level</a>
+</root>
+
+  </div>
+    <div class="localtoc">
+      <div class="tocwrapper">
+        <div class="header localtoc-header">
+          <a id="scroll-up" href="#top-anchor" title="Back to top"></a>
+        </div>
+        <nav>
+          <ul>
+<li><a class="reference internal" href="#">Hardware Guide</a><ul>
+<li><a class="reference internal" href="#components-and-connections">Components and Connections</a></li>
+<li><a class="reference internal" href="#hardware-setup">Hardware Setup</a><ul>
+<li><a class="reference internal" href="#jumper-configuration">Jumper Configuration</a></li>
+<li><a class="reference internal" href="#battery-emulator-setup">Battery Emulator Setup</a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#cell-voltage-measurement-using-dmm">Cell Voltage Measurement Using DMM</a></li>
+<li><a class="reference internal" href="#full-system-integration-setup">Full System Integration Setup</a><ul>
+<li><a class="reference internal" href="#ad-bmse2e3wlc-48v-baseboard-setup">AD-BMSE2E3WLC-48V Baseboard Setup</a></li>
+<li><a class="reference internal" href="#microcontroller-connection">Microcontroller Connection</a></li>
+<li><a class="reference internal" href="#v-connection">48V Connection</a></li>
+<li><a class="reference internal" href="#cable-and-pc-connection">Cable and PC Connection</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+
+        </nav>
+      </div>
+    </div>
+
+  
+      <div class="sphinxsidebar" role="navigation" aria-label="Main">
+        <div class="sphinxsidebarwrapper">
+    <a id="no-logo" href="../../../../index.html">
+      System Level Documentation
+    </a><input id="input-switch-toc" type="checkbox">
+<label id="show-repotoc" for="input-switch-toc">
+All content
+</label>
+<label id="show-toc" for="input-switch-toc">
+Content on this topic
+</label>
+<div class="repotoc-tree">
+  <root>
+  <a href="../../../../index.html" class="current">System Level</a>
+</root>
+
+</div>
+<div class="toc-tree">
+  <p class="caption" role="heading">
+  <span class="caption-text">Apps &amp; Solutions</span>
+</p>
+
+<ul class="current">
+<li class="toctree-l1 current"><input class="toctree-collapse" type="checkbox" name="toctree-collapse-1" id="toctree-collapse-1" checked=""/><div class="collapse"><a class="reference internal" href="../../index.html">Reference Designs</a><label for="toctree-collapse-1"><div class="icon"></div></label></div><ul class="current">
+<li class="toctree-l2 current"><input class="toctree-collapse" type="checkbox" name="toctree-collapse-1-1" id="toctree-collapse-1-1" checked=""/><div class="collapse"><a class="reference internal" href="../index.html">EVAL-ADBMS1816WLC</a><label for="toctree-collapse-1-1"><div class="icon"></div></label></div><ul class="current">
+<li class="toctree-l3 current"><a class="current reference internal" href="#">Hardware Guide</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../software-guide/index.html">Software Guide</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+
+
+</div>
+        </div>
+      </div>
+
+  <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper" id="top-anchor">
+          <div class="body-header">
+  <nav class="breadcrumb"><ol><li><a href="../../index.html">Reference Designs</a></li><li><a href="../index.html">EVAL-ADBMS1816WLC</a></li></ol></nav>
+</div>
+          <div class="body" role="main">
+            
+  <section id="hardware-guide">
+<span id="ad-bmse2e3wlc-48v-hardware"></span><h1>Hardware Guide<a class="headerlink" href="#hardware-guide" title="Link to this heading"></a></h1>
+<section id="components-and-connections">
+<h2>Components and Connections<a class="headerlink" href="#components-and-connections" title="Link to this heading"></a></h2>
+<figure class="align-default" id="id1">
+<a class="reference internal image-reference" href="https://media.githubusercontent.com/media/jvelasc2/adi-documentation-fork/eval-adbms1816wlc/docs/solutions/reference-designs/eval-adbms1816wlc/hardware-guide/eval-adbms1816wlc-components.png"><img alt="https://media.githubusercontent.com/media/jvelasc2/adi-documentation-fork/eval-adbms1816wlc/docs/solutions/reference-designs/eval-adbms1816wlc/hardware-guide/eval-adbms1816wlc-components.png" src="https://media.githubusercontent.com/media/jvelasc2/adi-documentation-fork/eval-adbms1816wlc/docs/solutions/reference-designs/eval-adbms1816wlc/hardware-guide/eval-adbms1816wlc-components.png" style="width: 800px;" />
+</a>
+<figcaption>
+<p><span class="caption-number">Figure 1 </span><span class="caption-text">EVAL-ADBMS1816WLC Components</span><a class="headerlink" href="#id1" title="Link to this image"></a></p>
+</figcaption>
+</figure>
+<div class="table-wrapper docutils container">
+<table class="docutils align-default">
+<thead>
+<tr class="row-odd"><th class="head"><p>No.</p></th>
+<th class="head"><p>Component</p></th>
+<th class="head"><p>Function</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>1</p></td>
+<td><p>Battery Cell
+Connector</p></td>
+<td><p>Connector for Cell Input
+(for example, DC2472A cell emulator)</p></td>
+</tr>
+<tr class="row-odd"><td><p>2</p></td>
+<td><p>ADBMS1816W (U3)</p></td>
+<td><p>16-Cell BMS Monitoring Chip</p></td>
+</tr>
+<tr class="row-even"><td><p>3a</p></td>
+<td><p>Arduino Headers</p></td>
+<td><p>Arduino Header Connector left side</p></td>
+</tr>
+<tr class="row-odd"><td><p>3b</p></td>
+<td><p>Arduino Headers</p></td>
+<td><p>Arduino Header Connector right side</p></td>
+</tr>
+<tr class="row-even"><td><p>4</p></td>
+<td><p>isoSPI Connectors</p></td>
+<td><p>Duraclik isoSPI Connector terminals</p></td>
+</tr>
+</tbody>
+</table>
+</div>
+</section>
+<section id="hardware-setup">
+<h2>Hardware Setup<a class="headerlink" href="#hardware-setup" title="Link to this heading"></a></h2>
+<p><strong>Requirements</strong></p>
+<blockquote>
+<div><ul class="simple">
+<li><p>1 × EVAL-ADBMS1816WLC Board</p></li>
+<li><p>1 × DC2472A Battery Emulator</p></li>
+<li><p>1 × Digital Multimeter (DMM)</p></li>
+</ul>
+</div></blockquote>
+<section id="jumper-configuration">
+<h3>Jumper Configuration<a class="headerlink" href="#jumper-configuration" title="Link to this heading"></a></h3>
+<p>Configure the shunt connectors in <strong>P17, P24,
+P34, P30, P18, and P35.</strong> Refer to the pin positions in the
+figure below for proper shunt configuration.</p>
+<figure class="align-default" id="id2">
+<a class="reference internal image-reference" href="https://media.githubusercontent.com/media/jvelasc2/adi-documentation-fork/eval-adbms1816wlc/docs/solutions/reference-designs/eval-adbms1816wlc/hardware-guide/daughterboard-shunt-config.png"><img alt="https://media.githubusercontent.com/media/jvelasc2/adi-documentation-fork/eval-adbms1816wlc/docs/solutions/reference-designs/eval-adbms1816wlc/hardware-guide/daughterboard-shunt-config.png" src="https://media.githubusercontent.com/media/jvelasc2/adi-documentation-fork/eval-adbms1816wlc/docs/solutions/reference-designs/eval-adbms1816wlc/hardware-guide/daughterboard-shunt-config.png" style="width: 700px;" />
+</a>
+<figcaption>
+<p><span class="caption-number">Figure 2 </span><span class="caption-text">EVAL-ADBMS1816WLC Daughter Board Shunt Configuration</span><a class="headerlink" href="#id2" title="Link to this image"></a></p>
+</figcaption>
+</figure>
+</section>
+<section id="battery-emulator-setup">
+<h3>Battery Emulator Setup<a class="headerlink" href="#battery-emulator-setup" title="Link to this heading"></a></h3>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>The DC2472A Battery Emulator Board is used for cell voltage
+input in this setup.</p>
+</div>
+<ul>
+<li><p>Plug the screw-terminal block into the cell voltage connector of the
+DC2472A battery emulator.</p></li>
+<li><p>Connect the DC2472A battery emulator to the EVAL-ADBMS1816WLC
+daughterboard through the cell connector.</p>
+<figure class="align-default" id="id3">
+<a class="reference internal image-reference" href="https://media.githubusercontent.com/media/jvelasc2/adi-documentation-fork/eval-adbms1816wlc/docs/solutions/reference-designs/eval-adbms1816wlc/hardware-guide/emulator-to-daughterboard.png"><img alt="https://media.githubusercontent.com/media/jvelasc2/adi-documentation-fork/eval-adbms1816wlc/docs/solutions/reference-designs/eval-adbms1816wlc/hardware-guide/emulator-to-daughterboard.png" src="https://media.githubusercontent.com/media/jvelasc2/adi-documentation-fork/eval-adbms1816wlc/docs/solutions/reference-designs/eval-adbms1816wlc/hardware-guide/emulator-to-daughterboard.png" style="width: 600px;" />
+</a>
+<figcaption>
+<p><span class="caption-number">Figure 3 </span><span class="caption-text">EVAL-ADBMS1816WLC to Battery Emulator Setup</span><a class="headerlink" href="#id3" title="Link to this image"></a></p>
+</figcaption>
+</figure>
+</li>
+<li><p>Connect a 5V external power source to the DC2472A battery emulator (J1)
+using a USB cable. An external power supply is recommended for adequate
+power.</p></li>
+<li><p>Alternatively, power it through a PC using a USB cable.</p>
+<div class="line-block">
+<div class="line"><br /></div>
+</div>
+<p><strong>Power Verification</strong></p>
+<p>After powering up:</p>
+<blockquote>
+<div><ul>
+<li><p>On <strong>DC2472A</strong>:</p>
+<ul class="simple">
+<li><p>Blue LED (LED1) should turn <strong>ON</strong></p></li>
+</ul>
+<figure class="align-default" id="id4">
+<a class="reference internal image-reference" href="https://media.githubusercontent.com/media/jvelasc2/adi-documentation-fork/eval-adbms1816wlc/docs/solutions/reference-designs/eval-adbms1816wlc/hardware-guide/emulator-led-on.png"><img alt="https://media.githubusercontent.com/media/jvelasc2/adi-documentation-fork/eval-adbms1816wlc/docs/solutions/reference-designs/eval-adbms1816wlc/hardware-guide/emulator-led-on.png" src="https://media.githubusercontent.com/media/jvelasc2/adi-documentation-fork/eval-adbms1816wlc/docs/solutions/reference-designs/eval-adbms1816wlc/hardware-guide/emulator-led-on.png" style="width: 350px;" />
+</a>
+<figcaption>
+<p><span class="caption-number">Figure 4 </span><span class="caption-text">DC2472A Emulator Power LED</span><a class="headerlink" href="#id4" title="Link to this image"></a></p>
+</figcaption>
+</figure>
+</li>
+</ul>
+</div></blockquote>
+</li>
+</ul>
+</section>
+</section>
+<section id="cell-voltage-measurement-using-dmm">
+<h2>Cell Voltage Measurement Using DMM<a class="headerlink" href="#cell-voltage-measurement-using-dmm" title="Link to this heading"></a></h2>
+<p>Using a <strong>Digital Multimeter (DMM)</strong>:</p>
+<p>Rotate the knob of the DC2472A clockwise to set it to the lowest
+voltage. Record the measurement for each cell voltage (C1 to C16).</p>
+<blockquote>
+<div><ul class="simple">
+<li><p>Set the DMM to voltage mode</p></li>
+<li><p>Place the probes (+) and (–) between adjacent cells to measure voltage</p></li>
+<li><p>The reading should fall within the specified range to be considered
+“good”; otherwise, mark it as “bad”</p></li>
+<li><p>Do not remove the supply during measurement</p></li>
+<li><p>Clockwise → lowest voltage (1.3V to 1.7V)</p></li>
+<li><p>Counterclockwise → highest voltage (4.0V to 4.5V)</p></li>
+</ul>
+<figure class="align-default" id="id5">
+<a class="reference internal image-reference" href="https://media.githubusercontent.com/media/jvelasc2/adi-documentation-fork/eval-adbms1816wlc/docs/solutions/reference-designs/eval-adbms1816wlc/hardware-guide/emulator-potentiometer.png"><img alt="https://media.githubusercontent.com/media/jvelasc2/adi-documentation-fork/eval-adbms1816wlc/docs/solutions/reference-designs/eval-adbms1816wlc/hardware-guide/emulator-potentiometer.png" src="https://media.githubusercontent.com/media/jvelasc2/adi-documentation-fork/eval-adbms1816wlc/docs/solutions/reference-designs/eval-adbms1816wlc/hardware-guide/emulator-potentiometer.png" style="width: 1000px;" />
+</a>
+<figcaption>
+<p><span class="caption-number">Figure 5 </span><span class="caption-text">DC2472A Battery Emulator Potentiometer</span><a class="headerlink" href="#id5" title="Link to this image"></a></p>
+</figcaption>
+</figure>
+</div></blockquote>
+<p><strong>Expected Reading between Cells for EVAL-ADBMS1816WLC</strong></p>
+<div class="table-wrapper docutils container">
+<table class="docutils align-default">
+<thead>
+<tr class="row-odd"><th class="head"><p>RANGE (V)</p></th>
+<th class="head"><p>C1</p></th>
+<th class="head"><p>C2</p></th>
+<th class="head"><p>C3</p></th>
+<th class="head"><p>C4</p></th>
+<th class="head"><p>C5</p></th>
+<th class="head"><p>C6</p></th>
+<th class="head"><p>C7</p></th>
+<th class="head"><p>C8</p></th>
+<th class="head"><p>C9</p></th>
+<th class="head"><p>C10</p></th>
+<th class="head"><p>C11</p></th>
+<th class="head"><p>C12</p></th>
+<th class="head"><p>C13</p></th>
+<th class="head"><p>C14</p></th>
+<th class="head"><p>C15</p></th>
+<th class="head"><p>C16</p></th>
+<th class="head"><p>ASSESSMENT</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>4.0 to 5.0</p></td>
+<td><p>4</p></td>
+<td><p>4</p></td>
+<td><p>4</p></td>
+<td><p>4</p></td>
+<td><p>4</p></td>
+<td><p>4</p></td>
+<td><p>4</p></td>
+<td><p>4</p></td>
+<td><p>4</p></td>
+<td><p>4</p></td>
+<td><p>4</p></td>
+<td><p>4</p></td>
+<td><p>4</p></td>
+<td><p>4</p></td>
+<td><p>4</p></td>
+<td><p>4</p></td>
+<td><p>GOOD</p></td>
+</tr>
+<tr class="row-odd"><td><p>1.3 to 1.7</p></td>
+<td><p>1.431</p></td>
+<td><p>1.431</p></td>
+<td><p>1.431</p></td>
+<td><p>1.431</p></td>
+<td><p>1.431</p></td>
+<td><p>1.431</p></td>
+<td><p>1.431</p></td>
+<td><p>1.431</p></td>
+<td><p>1.431</p></td>
+<td><p>1.431</p></td>
+<td><p>1.431</p></td>
+<td><p>1.431</p></td>
+<td><p>1.43</p></td>
+<td><p>1.43</p></td>
+<td><p>1.43</p></td>
+<td><p>1.43</p></td>
+<td><p>GOOD</p></td>
+</tr>
+</tbody>
+</table>
+</div>
+</section>
+<hr class="docutils" />
+<section id="full-system-integration-setup">
+<h2>Full System Integration Setup<a class="headerlink" href="#full-system-integration-setup" title="Link to this heading"></a></h2>
+<p><strong>Requirements</strong></p>
+<blockquote>
+<div><ul class="simple">
+<li><p>1 × AD-BMSE2E3WLC-48V Baseboard</p></li>
+<li><p>1 × EVAL-ADBMS1816WLC Daughter Board</p></li>
+<li><p>2 × DC2472A Battery Emulator</p></li>
+<li><p>1 × MAX32666FTHR Microcontroller</p></li>
+<li><p>1 × MAX32625PICO Programming Board</p></li>
+<li><p>2 × isoSPI twisted-pair cables</p></li>
+<li><p>1 × 10-pin SWD debugger cable</p></li>
+<li><p>3 × Micro-USB to USB cables</p></li>
+<li><p>2 × Red Alligator-to-Banana Plug Cables (1166-12-0)</p></li>
+<li><p>2 × Black Alligator-to-Banana Plug Cables (1166-12-0)</p></li>
+<li><p>1 × Digital Multimeter (DMM)</p></li>
+<li><p>1 × PC/Laptop</p></li>
+</ul>
+</div></blockquote>
+<section id="ad-bmse2e3wlc-48v-baseboard-setup">
+<h3>AD-BMSE2E3WLC-48V Baseboard Setup<a class="headerlink" href="#ad-bmse2e3wlc-48v-baseboard-setup" title="Link to this heading"></a></h3>
+<p>From the list of required hardware, select the <strong>AD-BMSE2E3WLC-48V Baseboard</strong>.</p>
+<ul>
+<li><p>Install the shunt connectors (if not yet installed) and ensure correct
+positions, as highlighted in red in the figure below.</p>
+<div class="admonition important">
+<p class="admonition-title">Important</p>
+<p>Header P16 must be configured with the shunt installed between
+pin 2 and pin 3. This setting configures the board for 48V operation.</p>
+</div>
+<figure class="align-default" id="id6">
+<a class="reference internal image-reference" href="https://media.githubusercontent.com/media/jvelasc2/adi-documentation-fork/eval-adbms1816wlc/docs/solutions/reference-designs/eval-adbms1816wlc/hardware-guide/baseboard-shunt-configuration.png"><img alt="https://media.githubusercontent.com/media/jvelasc2/adi-documentation-fork/eval-adbms1816wlc/docs/solutions/reference-designs/eval-adbms1816wlc/hardware-guide/baseboard-shunt-configuration.png" src="https://media.githubusercontent.com/media/jvelasc2/adi-documentation-fork/eval-adbms1816wlc/docs/solutions/reference-designs/eval-adbms1816wlc/hardware-guide/baseboard-shunt-configuration.png" style="width: 1500px;" />
+</a>
+<figcaption>
+<p><span class="caption-number">Figure 6 </span><span class="caption-text">AD-BMSE2E3WLC-48V Baseboard Shunt Configuration</span><a class="headerlink" href="#id6" title="Link to this image"></a></p>
+</figcaption>
+</figure>
+</li>
+</ul>
+</section>
+<section id="microcontroller-connection">
+<h3>Microcontroller Connection<a class="headerlink" href="#microcontroller-connection" title="Link to this heading"></a></h3>
+<ul>
+<li><p>Attach the MAX32666FTHR microcontroller to the AD-BMSE2E3WLC-48V
+Baseboard through the Featherwing connector.</p>
+<figure class="align-default" id="id7">
+<a class="reference internal image-reference" href="https://media.githubusercontent.com/media/jvelasc2/adi-documentation-fork/eval-adbms1816wlc/docs/solutions/reference-designs/eval-adbms1816wlc/hardware-guide/baseboard-to-max32666fthr.png"><img alt="https://media.githubusercontent.com/media/jvelasc2/adi-documentation-fork/eval-adbms1816wlc/docs/solutions/reference-designs/eval-adbms1816wlc/hardware-guide/baseboard-to-max32666fthr.png" src="https://media.githubusercontent.com/media/jvelasc2/adi-documentation-fork/eval-adbms1816wlc/docs/solutions/reference-designs/eval-adbms1816wlc/hardware-guide/baseboard-to-max32666fthr.png" style="width: 600px;" />
+</a>
+<figcaption>
+<p><span class="caption-number">Figure 7 </span><span class="caption-text">MAX32666FTHR Mounted to the AD-BMSE2E3WLC-48V Baseboard</span><a class="headerlink" href="#id7" title="Link to this image"></a></p>
+</figcaption>
+</figure>
+</li>
+</ul>
+</section>
+<section id="v-connection">
+<h3>48V Connection<a class="headerlink" href="#v-connection" title="Link to this heading"></a></h3>
+<ul>
+<li><p>Connect the red alligator to banana jack cable between <strong>48V</strong> and
+<strong>TP11</strong> on the AD-BMSE2E3WLC-48V as shown below.</p>
+<figure class="align-default" id="id8">
+<img alt="https://media.githubusercontent.com/media/jvelasc2/adi-documentation-fork/eval-adbms1816wlc/docs/solutions/reference-designs/eval-adbms1816wlc/hardware-guide/48v-connection.png" src="https://media.githubusercontent.com/media/jvelasc2/adi-documentation-fork/eval-adbms1816wlc/docs/solutions/reference-designs/eval-adbms1816wlc/hardware-guide/48v-connection.png" />
+<figcaption>
+<p><span class="caption-number">Figure 8 </span><span class="caption-text">48V Connection</span><a class="headerlink" href="#id8" title="Link to this image"></a></p>
+</figcaption>
+</figure>
+</li>
+</ul>
+</section>
+<section id="cable-and-pc-connection">
+<h3>Cable and PC Connection<a class="headerlink" href="#cable-and-pc-connection" title="Link to this heading"></a></h3>
+<blockquote>
+<div><dl class="simple">
+<dt>(A). Plug the micro-USB cable to the first DC2472A battery emulator</dt><dd><p>that is connected to AD-BMSE2E3WLC-48V.</p>
+</dd>
+<dt>(B). Plug the micro-USB cable to the second DC2472A battery emulator</dt><dd><p>that is connected to EVAL-ADBMS1816WLC.</p>
+</dd>
+</dl>
+<p>(C). Plug the micro-USB cable into the MAX32666FTHR.</p>
+<p>(D). Connect the 2-wire isoSPI cable from P10 of AD-BMSE2E3WLC-48V.</p>
+<dl class="simple">
+<dt>(E). Connect the other end of the 2-wire isoSPI cable to P10 of</dt><dd><p>EVAL-ADBMS1816WLC.</p>
+</dd>
+</dl>
+<p>(F). Connect all USB cables to a USB hub (preferred).</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>If your PC/laptop USB ports can supply ≥1 A, you may connect devices
+directly without a USB hub.</p>
+</div>
+<p>Your setup should look like below:</p>
+<figure class="align-default" id="id9">
+<a class="reference internal image-reference" href="https://media.githubusercontent.com/media/jvelasc2/adi-documentation-fork/eval-adbms1816wlc/docs/solutions/reference-designs/eval-adbms1816wlc/hardware-guide/full-integration-setup.png"><img alt="https://media.githubusercontent.com/media/jvelasc2/adi-documentation-fork/eval-adbms1816wlc/docs/solutions/reference-designs/eval-adbms1816wlc/hardware-guide/full-integration-setup.png" src="https://media.githubusercontent.com/media/jvelasc2/adi-documentation-fork/eval-adbms1816wlc/docs/solutions/reference-designs/eval-adbms1816wlc/hardware-guide/full-integration-setup.png" style="width: 600px;" />
+</a>
+<figcaption>
+<p><span class="caption-number">Figure 9 </span><span class="caption-text">Full Hardware Evaluation Setup</span><a class="headerlink" href="#id9" title="Link to this image"></a></p>
+</figcaption>
+</figure>
+</div></blockquote>
+<div class="line-block">
+<div class="line"><br /></div>
+</div>
+<p>The EVAL-ADBMS1816WLC can be evaluated through the ACE GUI by running the AD-BMSE2E3WLC software package.</p>
+<p>Access the software resources and see the setup procedure in the
+<a class="reference internal" href="../software-guide/index.html#eval-adbms1816wlc-software"><span class="std std-ref">Software User Guide</span></a>.</p>
+</section>
+</section>
+</section>
+
+
+          </div>
+              <div class="related">
+                &nbsp;
+    <a href="../index.html" title="Previous document (Alt+Shift+LeftArrow)" class="prev">EVAL-ADBMS1816WLC</a>
+    <a href="../software-guide/index.html" title="Next document (Alt+Shift+RightArrow)" class="next">Software Guide</a>
+              </div>
+          
+        </div>
+      </div>
+  </div>
+
+  <label id="cancel-area-show-toc" for="input-show-toc"></label>
+  <label id="cancel-area-show-localtoc" for="input-show-localtoc"></label>
+    <footer>
+      &#169;2026, Analog Devices, Inc.
+      
+      |
+      Made with <a href="https://www.sphinx-doc.org/">Sphinx</a>
+      &amp; <a href="https://github.com/analogdevicesinc/doctools">Doctools</a>
+      
+    </footer>
+  </body>
+</html>
