@@ -639,10 +639,12 @@ temperatures, and operating-state transitions during evaluation.</p>
 <li><p>Cell voltage: <strong>1.3V to 1.7V</strong></p></li>
 <li><p>Stack voltage: decreases</p></li>
 </ul>
-<figure class="align-default">
+<figure class="align-default" id="id15">
 <img alt="https://media.githubusercontent.com/media/jvelasc2/adi-documentation-fork/eval-adbms1816wlc/docs/solutions/reference-designs/eval-adbms1816wlc/software-guide/min-voltage-test.png" src="https://media.githubusercontent.com/media/jvelasc2/adi-documentation-fork/eval-adbms1816wlc/docs/solutions/reference-designs/eval-adbms1816wlc/software-guide/min-voltage-test.png" />
+<figcaption>
+<p><span class="caption-number">Figure 15 </span><span class="caption-text">AD-BMSE2E3WLC-SL Minimum Voltage Test</span><a class="headerlink" href="#id15" title="Link to this image"></a></p>
+</figcaption>
 </figure>
-<p>AD-BMSE2E3WLC-SL Minimum Voltage Test</p>
 </div></blockquote>
 </li>
 </ul>
@@ -658,10 +660,10 @@ temperatures, and operating-state transitions during evaluation.</p>
 <li><p>Cell voltage: <strong>4.0V to 5.0V</strong></p></li>
 <li><p>Stack voltage: increases</p></li>
 </ul>
-<figure class="align-default" id="id15">
+<figure class="align-default" id="id16">
 <img alt="https://media.githubusercontent.com/media/jvelasc2/adi-documentation-fork/eval-adbms1816wlc/docs/solutions/reference-designs/eval-adbms1816wlc/software-guide/max-voltage-test.png" src="https://media.githubusercontent.com/media/jvelasc2/adi-documentation-fork/eval-adbms1816wlc/docs/solutions/reference-designs/eval-adbms1816wlc/software-guide/max-voltage-test.png" />
 <figcaption>
-<p><span class="caption-number">Figure 15 </span><span class="caption-text">AD-BMSE2E3WLC-SL Maximum Voltage Test</span><a class="headerlink" href="#id15" title="Link to this image"></a></p>
+<p><span class="caption-number">Figure 16 </span><span class="caption-text">AD-BMSE2E3WLC-SL Maximum Voltage Test</span><a class="headerlink" href="#id16" title="Link to this image"></a></p>
 </figcaption>
 </figure>
 </div></blockquote>
@@ -669,41 +671,43 @@ temperatures, and operating-state transitions during evaluation.</p>
 </ul>
 </div></blockquote>
 <p>You may adjust one emulator at a time to observe changes clearly.</p>
-<blockquote>
-<div></div></blockquote>
 </div></blockquote>
 </section>
+<hr class="docutils" />
 <section id="output-power-delivery-test">
 <h4>Output Power Delivery Test<a class="headerlink" href="#output-power-delivery-test" title="Link to this heading"></a></h4>
 <p>Measure using a <strong>Digital Multimeter (DMM)</strong>:</p>
 <blockquote>
-<div><blockquote>
 <div><ul class="simple">
 <li><p>Connect <strong>DMM (–)</strong> to AD-BMSE2E3WLC-48V Baseboard’s <strong>Ground</strong>.</p></li>
 <li><p>Connect <strong>DMM (+)</strong> to AD-BMSE2E3WLC-48V Baseboard’s <strong>TP23</strong>.</p></li>
 </ul>
-<p>Expected reading: <strong>4.0V to 4.7V</strong></p>
-<p>Notice that output “Stack Voltage” is at <strong>94.43V</strong> while the DMM reading is at <strong>4.3V</strong>.</p>
 </div></blockquote>
-<figure class="align-default" id="id16">
-<img alt="https://media.githubusercontent.com/media/jvelasc2/adi-documentation-fork/eval-adbms1816wlc/docs/solutions/reference-designs/eval-adbms1816wlc/software-guide/output-pd-parked-mode.png" src="https://media.githubusercontent.com/media/jvelasc2/adi-documentation-fork/eval-adbms1816wlc/docs/solutions/reference-designs/eval-adbms1816wlc/software-guide/output-pd-parked-mode.png" />
+<p><strong>Parked Mode:</strong></p>
+<blockquote>
+<div><figure class="align-default" id="id17">
+<img alt="https://media.githubusercontent.com/media/jvelasc2/adi-documentation-fork/eval-adbms1816wlc/docs/solutions/reference-designs/eval-adbms1816wlc/software-guide/parked-mode-pd.png" src="https://media.githubusercontent.com/media/jvelasc2/adi-documentation-fork/eval-adbms1816wlc/docs/solutions/reference-designs/eval-adbms1816wlc/software-guide/parked-mode-pd.png" />
 <figcaption>
-<p><span class="caption-number">Figure 16 </span><span class="caption-text">AD-BMSE2E3WLC-SL Power Delivery Test “Parked” Mode</span><a class="headerlink" href="#id16" title="Link to this image"></a></p>
+<p><span class="caption-number">Figure 17 </span><span class="caption-text">AD-BMSE2E3WLC-SL Power Delivery Test – “Parked” Mode</span><a class="headerlink" href="#id17" title="Link to this image"></a></p>
 </figcaption>
 </figure>
 </div></blockquote>
+<p><strong>Driving Mode:</strong></p>
 <p>In GUI:</p>
 <blockquote>
 <div><ul class="simple">
 <li><p>Set <strong>Vehicle State = Driving</strong>.</p></li>
 <li><p>Verify voltage again in DMM.</p></li>
 </ul>
-<figure class="align-default" id="id17">
-<img alt="https://media.githubusercontent.com/media/jvelasc2/adi-documentation-fork/eval-adbms1816wlc/docs/solutions/reference-designs/eval-adbms1816wlc/software-guide/output-pd-driving-mode.png" src="https://media.githubusercontent.com/media/jvelasc2/adi-documentation-fork/eval-adbms1816wlc/docs/solutions/reference-designs/eval-adbms1816wlc/software-guide/output-pd-driving-mode.png" />
+<figure class="align-default" id="id18">
+<img alt="https://media.githubusercontent.com/media/jvelasc2/adi-documentation-fork/eval-adbms1816wlc/docs/solutions/reference-designs/eval-adbms1816wlc/software-guide/driving-mode-pd.png" src="https://media.githubusercontent.com/media/jvelasc2/adi-documentation-fork/eval-adbms1816wlc/docs/solutions/reference-designs/eval-adbms1816wlc/software-guide/driving-mode-pd.png" />
 <figcaption>
-<p><span class="caption-number">Figure 17 </span><span class="caption-text">AD-BMSE2E3WLC-SL Power Delivery Test “Driving” Mode</span><a class="headerlink" href="#id17" title="Link to this image"></a></p>
+<p><span class="caption-number">Figure 18 </span><span class="caption-text">AD-BMSE2E3WLC-SL Power Delivery Test – “Driving” Mode</span><a class="headerlink" href="#id18" title="Link to this image"></a></p>
 </figcaption>
 </figure>
+<ul class="simple">
+<li><p>Once done, set the Vehicle State again to <strong>Parked</strong>, then close the GUI.</p></li>
+</ul>
 </div></blockquote>
 <div class="line-block">
 <div class="line"><br /></div>
