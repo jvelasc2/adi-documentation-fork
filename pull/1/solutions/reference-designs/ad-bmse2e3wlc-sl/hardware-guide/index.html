@@ -8,7 +8,7 @@
 
     <title>Hardware Guide &#8212; System Level Documentation  documentation</title>
     <link rel="stylesheet" type="text/css" href="../../../../_static/pygments.css?v=8e8a900e" />
-    <link rel="stylesheet" type="text/css" href="../../../../_static/app.min.css?v=a8f9a170" />
+    <link rel="stylesheet" type="text/css" href="../../../../_static/app.min.css?v=d3f78147" />
     <link rel="stylesheet" type="text/css" href="../../../../_static/custom.css?v=5f9cb17c" />
     <script async="async" src="../../../../_static/app.umd.js?v=26d0298f"></script>
     <link rel="icon" href="../../../../_static/icon.svg"/>
@@ -190,7 +190,7 @@ Connector</p></td>
 </tr>
 <tr class="row-odd"><td><p>2</p></td>
 <td><p>ADBMS1816W</p></td>
-<td><p>Battery Cell monitoring IC</p></td>
+<td><p>Battery cell monitoring IC</p></td>
 </tr>
 <tr class="row-even"><td><p>3</p></td>
 <td><p>LTC7000</p></td>
@@ -231,7 +231,7 @@ factor boards</p></td>
 <tr class="row-odd"><td><p>8</p></td>
 <td><p>VBAT+
 Connector</p></td>
-<td><p>Positive Terminal Connector for total
+<td><p>Positive terminal connector for total
 voltage capacity of the battery pack</p></td>
 </tr>
 <tr class="row-even"><td><p>9</p></td>
@@ -276,37 +276,32 @@ Link+ Output</p></td>
 <table class="docutils align-default">
 <thead>
 <tr class="row-odd"><th class="head"><p>No.</p></th>
-<th class="head" colspan="2"><p>Component</p></th>
+<th class="head"><p>Component</p></th>
 <th class="head"><p>Function</p></th>
 </tr>
 </thead>
 <tbody>
 <tr class="row-even"><td><p>1</p></td>
-<td colspan="3"><p>Eval board Cell      | eval-adbms1816wlc connector
-Connector            |</p></td>
+<td><p>Battery Cell
+Connector</p></td>
+<td><p>Connector for Cell Input
+(for example, DC2472A cell emulator)</p></td>
 </tr>
 <tr class="row-odd"><td><p>2</p></td>
-<td colspan="3"><dl class="simple">
-<dt>Eval board           | eval-adbms1816wlc 16-Cell Monitoring</dt><dd><p>ADBMS1816W (U3)     | Chip</p>
-</dd>
-</dl>
-</td>
+<td><p>ADBMS1816W (U3)</p></td>
+<td><p>16-Cell BMS Monitoring Chip</p></td>
 </tr>
 <tr class="row-even"><td><p>3a</p></td>
-<td colspan="2"><p>Eval board Arduino
-Headers</p></td>
+<td><p>Arduino Headers</p></td>
 <td><p>Arduino Header Connector left side</p></td>
 </tr>
 <tr class="row-odd"><td><p>3b</p></td>
-<td colspan="2"><p>Eval board Arduino
-Headers</p></td>
+<td><p>Arduino Headers</p></td>
 <td><p>Arduino Header Connector right side</p></td>
 </tr>
 <tr class="row-even"><td><p>4</p></td>
-<td colspan="2"><p>Eval board isoSPI
-Connectors</p></td>
-<td><p>Duraclik isoSPI for connector terminals
-for eval-adbms1816wlc</p></td>
+<td><p>isoSPI Connectors</p></td>
+<td><p>Duraclik isoSPI Connector terminals</p></td>
 </tr>
 </tbody>
 </table>
@@ -385,6 +380,7 @@ for eval-adbms1816wlc</p></td>
 <li><p>2 × Red Alligator-to-Banana Plug Cables (1166-12-0)</p></li>
 <li><p>2 × Black Alligator-to-Banana Plug Cables (1166-12-0)</p></li>
 <li><p>12 × Pin Header Shunts (if not yet installed)</p></li>
+<li><p>1 × Digital Multimeter (DMM)</p></li>
 </ul>
 <section id="jumper-configuration">
 <h3>Jumper Configuration<a class="headerlink" href="#jumper-configuration" title="Link to this heading"></a></h3>
@@ -406,8 +402,9 @@ pin 2 and pin 3. This setting configures the board for 48V operation.</p>
 </figure>
 <hr class="docutils" />
 <p><strong>EVAL-ADBMSE2E3WLC Daughter Board</strong></p>
-<p>Ensure that the shunt connectors are properly configured for <strong>P17, P24,
-P34, P30, P18, and P35.</strong></p>
+<p>Configure the shunt connectors in <strong>P17, P24,
+P34, P30, P18, and P35.</strong> Refer to the pin positions in the
+figure below for proper shunt configuration.</p>
 <figure class="align-default" id="id5">
 <a class="reference internal image-reference" href="https://media.githubusercontent.com/media/jvelasc2/adi-documentation-fork/ref-design/bmse2e3wlc/docs/solutions/reference-designs/ad-bmse2e3wlc-sl/hardware-guide/daughterboard-shunt-config.png"><img alt="https://media.githubusercontent.com/media/jvelasc2/adi-documentation-fork/ref-design/bmse2e3wlc/docs/solutions/reference-designs/ad-bmse2e3wlc-sl/hardware-guide/daughterboard-shunt-config.png" src="https://media.githubusercontent.com/media/jvelasc2/adi-documentation-fork/ref-design/bmse2e3wlc/docs/solutions/reference-designs/ad-bmse2e3wlc-sl/hardware-guide/daughterboard-shunt-config.png" style="width: 700px;" />
 </a>
@@ -494,7 +491,7 @@ Baseboard through the Featherwing connector.</p>
 <a class="reference internal image-reference" href="https://media.githubusercontent.com/media/jvelasc2/adi-documentation-fork/ref-design/bmse2e3wlc/docs/solutions/reference-designs/ad-bmse2e3wlc-sl/hardware-guide/max32666fthr-connection.png"><img alt="https://media.githubusercontent.com/media/jvelasc2/adi-documentation-fork/ref-design/bmse2e3wlc/docs/solutions/reference-designs/ad-bmse2e3wlc-sl/hardware-guide/max32666fthr-connection.png" src="https://media.githubusercontent.com/media/jvelasc2/adi-documentation-fork/ref-design/bmse2e3wlc/docs/solutions/reference-designs/ad-bmse2e3wlc-sl/hardware-guide/max32666fthr-connection.png" style="width: 600px;" />
 </a>
 <figcaption>
-<p><span class="caption-number">Figure 10 </span><span class="caption-text">MAX32666FTHR to AD-BMSE2E3WLC-48V Baseboard</span><a class="headerlink" href="#id10" title="Link to this image"></a></p>
+<p><span class="caption-number">Figure 10 </span><span class="caption-text">MAX32666FTHR MCU to AD-BMSE2E3WLC-48V Baseboard</span><a class="headerlink" href="#id10" title="Link to this image"></a></p>
 </figcaption>
 </figure>
 </li>
@@ -516,17 +513,20 @@ Baseboard through the Featherwing connector.</p>
 </section>
 <section id="cable-and-pc-connection">
 <h3>Cable and PC Connection<a class="headerlink" href="#cable-and-pc-connection" title="Link to this heading"></a></h3>
-<ol class="upperalpha simple">
-<li><p>Plug the micro-USB cable to the first DC2472A battery emulator
-that is connected to AD-BMSE2E3WLC-48V.</p></li>
-<li><p>Plug the micro-USB cable to the second DC2472A battery emulator
-that is connected to EVAL-ADBMS1816WLC.</p></li>
-<li><p>Plug the micro-USB cable into the MAX32666FTHR.</p></li>
-<li><p>Connect the 2-wire isoSPI cable from P10 of AD-BMSE2E3WLC-48V.</p></li>
-<li><p>Connect the other end of the 2-wire isoSPI cable to P10 of
-EVAL-ADBMS1816WLC.</p></li>
-<li><p>Connect all USB cables to a USB hub (preferred).</p></li>
-</ol>
+<blockquote>
+<div><dl class="simple">
+<dt>(A). Plug the micro-USB cable to the first DC2472A battery emulator</dt><dd><p>that is connected to AD-BMSE2E3WLC-48V.</p>
+</dd>
+<dt>(B). Plug the micro-USB cable to the second DC2472A battery emulator</dt><dd><p>that is connected to EVAL-ADBMS1816WLC.</p>
+</dd>
+</dl>
+<p>(C). Plug the micro-USB cable into the MAX32666FTHR.</p>
+<p>(D). Connect the 2-wire isoSPI cable from P10 of AD-BMSE2E3WLC-48V.</p>
+<dl class="simple">
+<dt>(E). Connect the other end of the 2-wire isoSPI cable to P10 of</dt><dd><p>EVAL-ADBMS1816WLC.</p>
+</dd>
+</dl>
+<p>(F). Connect all USB cables to a USB hub (preferred).</p>
 <div class="admonition note">
 <p class="admonition-title">Note</p>
 <p>If your PC/laptop USB ports can supply ≥1 A, you may connect devices
@@ -537,9 +537,10 @@ directly without a USB hub.</p>
 <a class="reference internal image-reference" href="https://media.githubusercontent.com/media/jvelasc2/adi-documentation-fork/ref-design/bmse2e3wlc/docs/solutions/reference-designs/ad-bmse2e3wlc-sl/hardware-guide/full-integration-setup.png"><img alt="https://media.githubusercontent.com/media/jvelasc2/adi-documentation-fork/ref-design/bmse2e3wlc/docs/solutions/reference-designs/ad-bmse2e3wlc-sl/hardware-guide/full-integration-setup.png" src="https://media.githubusercontent.com/media/jvelasc2/adi-documentation-fork/ref-design/bmse2e3wlc/docs/solutions/reference-designs/ad-bmse2e3wlc-sl/hardware-guide/full-integration-setup.png" style="width: 600px;" />
 </a>
 <figcaption>
-<p><span class="caption-number">Figure 12 </span><span class="caption-text">AD-BMSE2E3WLC-48V Full Hardware Evaluation Setup</span><a class="headerlink" href="#id12" title="Link to this image"></a></p>
+<p><span class="caption-number">Figure 12 </span><span class="caption-text">Full Hardware Evaluation Setup</span><a class="headerlink" href="#id12" title="Link to this image"></a></p>
 </figcaption>
 </figure>
+</div></blockquote>
 <div class="line-block">
 <div class="line"><br /></div>
 </div>
