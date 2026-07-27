@@ -346,8 +346,48 @@ figures:</p></li>
 </li>
 <li><p>Restart ACE.</p>
 <p>Expected Result: Plugin <strong>AD-BMSE2E3WLC-48V</strong> appears.</p>
+<figure class="align-default" id="id10">
+<img alt="https://media.githubusercontent.com/media/jvelasc2/adi-documentation-fork/ref-design/bmse2e3wlc/docs/solutions/reference-designs/ad-bmse2e3wlc-sl/software-guide/ad-bmse2e3wlc-48v-plugin.png" src="https://media.githubusercontent.com/media/jvelasc2/adi-documentation-fork/ref-design/bmse2e3wlc/docs/solutions/reference-designs/ad-bmse2e3wlc-sl/software-guide/ad-bmse2e3wlc-48v-plugin.png" />
+<figcaption>
+<p><span class="caption-number">Figure 10 </span><span class="caption-text">ACE Plugin Detection</span><a class="headerlink" href="#id10" title="Link to this image"></a></p>
+</figcaption>
+</figure>
 </li>
 </ol>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>If the plugin does not appear or load in the ACE GUI, verify the installed libiio version on your PC.</p>
+<div class="line-block">
+<div class="line"><br /></div>
+</div>
+<p>To check the installed version:</p>
+<ol class="arabic">
+<li><p>Open <code class="docutils literal notranslate"><span class="pre">Control</span> <span class="pre">Panel</span></code> → <code class="docutils literal notranslate"><span class="pre">Programs</span> <span class="pre">and</span> <span class="pre">Features</span></code> (or Settings → Apps → Installed Apps).</p>
+<blockquote>
+<div><figure class="align-default" id="id11">
+<img alt="https://media.githubusercontent.com/media/jvelasc2/adi-documentation-fork/ref-design/bmse2e3wlc/docs/solutions/reference-designs/ad-bmse2e3wlc-sl/software-guide/libiio-check.png" src="https://media.githubusercontent.com/media/jvelasc2/adi-documentation-fork/ref-design/bmse2e3wlc/docs/solutions/reference-designs/ad-bmse2e3wlc-sl/software-guide/libiio-check.png" />
+<figcaption>
+<p><span class="caption-number">Figure 11 </span><span class="caption-text">Control Panel - Programs and Features</span><a class="headerlink" href="#id11" title="Link to this image"></a></p>
+</figcaption>
+</figure>
+</div></blockquote>
+</li>
+<li><p>Locate libiio in the list of installed programs.</p></li>
+<li><p>Verify that the installed version is <strong>0.26</strong>.</p>
+<blockquote>
+<div><figure class="align-default" id="id12">
+<img alt="https://media.githubusercontent.com/media/jvelasc2/adi-documentation-fork/ref-design/bmse2e3wlc/docs/solutions/reference-designs/ad-bmse2e3wlc-sl/software-guide/libiio-version.png" src="https://media.githubusercontent.com/media/jvelasc2/adi-documentation-fork/ref-design/bmse2e3wlc/docs/solutions/reference-designs/ad-bmse2e3wlc-sl/software-guide/libiio-version.png" />
+<figcaption>
+<p><span class="caption-number">Figure 12 </span><span class="caption-text">Installed libiio Version Check</span><a class="headerlink" href="#id12" title="Link to this image"></a></p>
+</figcaption>
+</figure>
+</div></blockquote>
+</li>
+</ol>
+<p>The ACE plugin requires <strong>libiio v0.26</strong> to function correctly.
+If an earlier version is installed (for example, v0.25), please upgrade to v0.26 using the following link:</p>
+<p><a class="icon link reference external" href="https://github.com/analogdevicesinc/libiio/releases/download/v0.26/libiio-0.26.ga0eca0d2-setup.exe" target="_blank">https://github.com/analogdevicesinc/libiio/releases/download/v0.26/libiio-0.26.ga0eca0d2-setup.exe</a></p>
+</div>
 </section>
 <hr class="docutils" />
 <section id="gui-overview">
@@ -357,10 +397,10 @@ battery-pack parameters, cell voltages, current measurements,
 operating state, and temperature information. The dashboard is
 designed to provide a quick overview of battery health and
 system status during evaluation and testing.</p>
-<figure class="align-default" id="id10">
+<figure class="align-default" id="id13">
 <img alt="https://media.githubusercontent.com/media/jvelasc2/adi-documentation-fork/ref-design/bmse2e3wlc/docs/solutions/reference-designs/ad-bmse2e3wlc-sl/software-guide/AD-BMSE2E3WLC-SL_GUI.png" src="https://media.githubusercontent.com/media/jvelasc2/adi-documentation-fork/ref-design/bmse2e3wlc/docs/solutions/reference-designs/ad-bmse2e3wlc-sl/software-guide/AD-BMSE2E3WLC-SL_GUI.png" />
 <figcaption>
-<p><span class="caption-number">Figure 10 </span><span class="caption-text">AD-BMSE2E3WLC-SL GUI</span><a class="headerlink" href="#id10" title="Link to this image"></a></p>
+<p><span class="caption-number">Figure 13 </span><span class="caption-text">AD-BMSE2E3WLC-SL GUI</span><a class="headerlink" href="#id13" title="Link to this image"></a></p>
 </figcaption>
 </figure>
 <section id="main-dashboard-layout">
@@ -589,10 +629,10 @@ AD-BMSE2E3WLC-SL evaluation.</p>
 <li><p>Stack voltage: decreases</p></li>
 </ul>
 </div></blockquote>
-<figure class="align-default" id="id11">
+<figure class="align-default" id="id14">
 <img alt="https://media.githubusercontent.com/media/jvelasc2/adi-documentation-fork/ref-design/bmse2e3wlc/docs/solutions/reference-designs/ad-bmse2e3wlc-sl/software-guide/minimum-voltage-test.png" src="https://media.githubusercontent.com/media/jvelasc2/adi-documentation-fork/ref-design/bmse2e3wlc/docs/solutions/reference-designs/ad-bmse2e3wlc-sl/software-guide/minimum-voltage-test.png" />
 <figcaption>
-<p><span class="caption-number">Figure 11 </span><span class="caption-text">AD-BMSE2E3WLC-SL Minimum Voltage Test</span><a class="headerlink" href="#id11" title="Link to this image"></a></p>
+<p><span class="caption-number">Figure 14 </span><span class="caption-text">AD-BMSE2E3WLC-SL Minimum Voltage Test</span><a class="headerlink" href="#id14" title="Link to this image"></a></p>
 </figcaption>
 </figure>
 </div></blockquote>
@@ -607,10 +647,10 @@ AD-BMSE2E3WLC-SL evaluation.</p>
 <li><p>Cell voltage: <strong>4.0V to 5.0V</strong></p></li>
 <li><p>Stack voltage: increases</p></li>
 </ul>
-<figure class="align-default" id="id12">
+<figure class="align-default" id="id15">
 <img alt="https://media.githubusercontent.com/media/jvelasc2/adi-documentation-fork/ref-design/bmse2e3wlc/docs/solutions/reference-designs/ad-bmse2e3wlc-sl/software-guide/maximum-voltage-test.png" src="https://media.githubusercontent.com/media/jvelasc2/adi-documentation-fork/ref-design/bmse2e3wlc/docs/solutions/reference-designs/ad-bmse2e3wlc-sl/software-guide/maximum-voltage-test.png" />
 <figcaption>
-<p><span class="caption-number">Figure 12 </span><span class="caption-text">AD-BMSE2E3WLC-SL Maximum Voltage Test</span><a class="headerlink" href="#id12" title="Link to this image"></a></p>
+<p><span class="caption-number">Figure 15 </span><span class="caption-text">AD-BMSE2E3WLC-SL Maximum Voltage Test</span><a class="headerlink" href="#id15" title="Link to this image"></a></p>
 </figcaption>
 </figure>
 </div></blockquote>
@@ -638,17 +678,17 @@ AD-BMSE2E3WLC-SL evaluation.</p>
 <li><p>Set <strong>Vehicle State = Driving</strong>.</p></li>
 <li><p>Verify voltage again.</p></li>
 </ul>
-<figure class="align-default" id="id13">
+<figure class="align-default" id="id16">
 <img alt="https://media.githubusercontent.com/media/jvelasc2/adi-documentation-fork/ref-design/bmse2e3wlc/docs/solutions/reference-designs/ad-bmse2e3wlc-sl/software-guide/driving-mode-pd.png" src="https://media.githubusercontent.com/media/jvelasc2/adi-documentation-fork/ref-design/bmse2e3wlc/docs/solutions/reference-designs/ad-bmse2e3wlc-sl/software-guide/driving-mode-pd.png" />
 <figcaption>
-<p><span class="caption-number">Figure 13 </span><span class="caption-text">AD-BMSE2E3WLC-SL Power Delivery Test - “Driving” Mode</span><a class="headerlink" href="#id13" title="Link to this image"></a></p>
+<p><span class="caption-number">Figure 16 </span><span class="caption-text">AD-BMSE2E3WLC-SL Power Delivery Test - “Driving” Mode</span><a class="headerlink" href="#id16" title="Link to this image"></a></p>
 </figcaption>
 </figure>
 <p><strong>Vehicle State = Parked</strong></p>
-<figure class="align-default" id="id14">
+<figure class="align-default" id="id17">
 <img alt="https://media.githubusercontent.com/media/jvelasc2/adi-documentation-fork/ref-design/bmse2e3wlc/docs/solutions/reference-designs/ad-bmse2e3wlc-sl/software-guide/parked-mode-pd.png" src="https://media.githubusercontent.com/media/jvelasc2/adi-documentation-fork/ref-design/bmse2e3wlc/docs/solutions/reference-designs/ad-bmse2e3wlc-sl/software-guide/parked-mode-pd.png" />
 <figcaption>
-<p><span class="caption-number">Figure 14 </span><span class="caption-text">AD-BMSE2E3WLC-SL Power Delivery Test - “Parked” Mode</span><a class="headerlink" href="#id14" title="Link to this image"></a></p>
+<p><span class="caption-number">Figure 17 </span><span class="caption-text">AD-BMSE2E3WLC-SL Power Delivery Test - “Parked” Mode</span><a class="headerlink" href="#id17" title="Link to this image"></a></p>
 </figcaption>
 </figure>
 </div></blockquote>
