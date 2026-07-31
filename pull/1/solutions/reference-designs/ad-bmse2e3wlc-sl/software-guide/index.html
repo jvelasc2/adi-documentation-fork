@@ -97,17 +97,20 @@
           <ul>
 <li><a class="reference internal" href="#">Software Guide</a><ul>
 <li><a class="reference internal" href="#software-resources">Software Resources</a></li>
-<li><a class="reference internal" href="#installing-the-firmware">Installing the Firmware</a><ul>
-<li><a class="reference internal" href="#using-the-pre-built-binaries-quick-flash">Using the Pre-built Binaries (Quick Flash)</a></li>
+<li><a class="reference internal" href="#firmware">Firmware</a><ul>
+<li><a class="reference internal" href="#prepare-the-max32666fthr-for-firmware-upload">Prepare the MAX32666FTHR for Firmware Upload</a></li>
+<li><a class="reference internal" href="#pre-built-binaries">Pre-built Binaries</a></li>
+<li><a class="reference internal" href="#flash-the-pre-built-binary-file-into-the-max32666fthr">Flash the Pre-built Binary File into the MAX32666FTHR</a></li>
+<li><a class="reference internal" href="#command-line-interface">Command Line Interface</a></li>
 </ul>
 </li>
 <li><a class="reference internal" href="#building-the-firmware-from-source">Building the Firmware from Source</a><ul>
-<li><a class="reference internal" href="#requirements">Requirements</a></li>
+<li><a class="reference internal" href="#requirements">Requirements</a><ul>
 <li><a class="reference internal" href="#windows">Windows</a></li>
 <li><a class="reference internal" href="#linux-debian-ubuntu">Linux (Debian/Ubuntu)</a></li>
+<li><a class="reference internal" href="#macos">macOS</a></li>
 </ul>
 </li>
-<li><a class="reference internal" href="#macos">macOS</a><ul>
 <li><a class="reference internal" href="#build-requirements">Build Requirements</a><ul>
 <li><a class="reference internal" href="#for-maxim-platform">For Maxim Platform</a></li>
 </ul>
@@ -120,7 +123,7 @@
 </li>
 </ul>
 </li>
-<li><a class="reference internal" href="#general-configuration-options">General Configuration Options</a></li>
+<li><a class="reference internal" href="#general-configuration-options">General Configuration Options</a><ul>
 <li><a class="reference internal" href="#example-measurements">Example Measurements</a><ul>
 <li><a class="reference internal" href="#adbms1816-basic">ADBMS1816_BASIC</a></li>
 <li><a class="reference internal" href="#adbms1816-balancing">ADBMS1816_BALANCING</a></li>
@@ -128,12 +131,14 @@
 <li><a class="reference internal" href="#adbms1816-fuel-gauge">ADBMS1816_FUEL_GAUGE</a></li>
 </ul>
 </li>
-<li><a class="reference internal" href="#iio-example">IIO_EXAMPLE</a></li>
-<li><a class="reference internal" href="#gui-setup">GUI Setup</a><ul>
+</ul>
+</li>
+<li><a class="reference internal" href="#graphical-user-interface-gui">Graphical User Interface (GUI)</a><ul>
+<li><a class="reference internal" href="#setup">Setup</a></li>
 <li><a class="reference internal" href="#launching-and-configuring-the-gui">Launching and Configuring the GUI</a></li>
 </ul>
 </li>
-<li><a class="reference internal" href="#gui-overview">GUI Overview</a><ul>
+<li><a class="reference internal" href="#gui-parts-overview">GUI Parts Overview</a><ul>
 <li><a class="reference internal" href="#main-dashboard-layout">Main Dashboard Layout</a></li>
 <li><a class="reference internal" href="#stack-voltage-gauge">Stack Voltage Gauge</a></li>
 <li><a class="reference internal" href="#vehicle-state-selection">Vehicle State Selection</a></li>
@@ -208,6 +213,15 @@ Content on this topic
 loading the ACE GUI plugin, and using the AD-BMSE2E3WLC-SL evaluation system.</p>
 <section id="software-resources">
 <h2>Software Resources<a class="headerlink" href="#software-resources" title="Link to this heading"></a></h2>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p><strong>A MyAnalog.com account is required to download the software resources.</strong></p>
+<p>Follow the steps below to create a MyAnalog account:</p>
+<ol class="arabic simple">
+<li><p>Go to <a class="icon adi reference external" href="https://www.analog.com/" target="_blank">MyAnalog</a> and create an account using email. Select the <strong>Register with email</strong> option to get started.</p></li>
+<li><p>Once you have a MyAnalog account, log in to MyAnalog using your credentials then proceed to download the required files listed below.</p></li>
+</ol>
+</div>
 <div class="admonition-download admonition">
 <p class="admonition-title">Download</p>
 <p>Required software and files for AD-BMSE2E3WLC-SL evaluation:</p>
@@ -216,28 +230,24 @@ loading the ACE GUI plugin, and using the AD-BMSE2E3WLC-SL evaluation system.</p
 <li><p>AD-BMSE2E3WLC-SL Firmware 1.0.0 - <strong>bms_measurement-max32665-iio-2x-adbms1816.hex</strong></p></li>
 <li><p>AD-BMSE2E3WLC-SL ACE GUI Plugin Installer - <strong>ADBMSE2E3WLC.1.2026.2041058-dev</strong></p></li>
 <li><p><a class="icon link reference external" href="https://github.com/analogdevicesinc/max32625pico-firmware-images/raw/master/bin/max32625_max32666fthr_if_crc_swd_v1.0.5.bin" target="_blank">MAX32625PICO Image</a></p></li>
+<li><p>Code Editor (such as Visual Studio Code)</p></li>
+<li><p>Terminal Application (such as Tera Term)</p></li>
 </ul>
 </div>
 </section>
 <hr class="docutils" />
-<section id="installing-the-firmware">
-<h2>Installing the Firmware<a class="headerlink" href="#installing-the-firmware" title="Link to this heading"></a></h2>
-<p><strong>Step 1: Hardware Connection</strong></p>
-<blockquote>
-<div><ul class="simple">
+<section id="firmware">
+<h2>Firmware<a class="headerlink" href="#firmware" title="Link to this heading"></a></h2>
+<section id="prepare-the-max32666fthr-for-firmware-upload">
+<h3>Prepare the MAX32666FTHR for Firmware Upload<a class="headerlink" href="#prepare-the-max32666fthr-for-firmware-upload" title="Link to this heading"></a></h3>
+<ul>
 <li><p>Connect the <strong>10-pin SWD ribbon cable</strong> to the <strong>MAX32666FTHR</strong>.</p></li>
 <li><p>Connect the other end to the <strong>MAX32625PICO.</strong></p></li>
 <li><p>Connect the MAX32625PICO to your PC with a <strong>micro-USB cable.</strong></p></li>
-</ul>
-</div></blockquote>
-<p><strong>Step 2: Upload Firmware</strong></p>
-<blockquote>
-<div><ul class="simple">
-<li><p>Download the MAX32625PICO image.</p></li>
+<li><p>Download the MAX32625PICO image (see link above).</p></li>
 <li><p>Extract the contents of the archive and locate the <strong>MAX32625_PICO.bin</strong> file.</p></li>
-<li><p>Copy the file into the <strong>MAINTENANCE</strong> folder on the connected MAX32625PICO.</p></li>
-<li><p>Wait for the transfer to complete.</p></li>
-</ul>
+<li><p>Copy the <strong>MAX32625_PICO.bin</strong> file into the <strong>MAINTENANCE</strong> folder of the connected MAX32625PICO.</p></li>
+<li><p>Wait for the transfer to complete.</p>
 <blockquote>
 <div><figure class="align-default" id="id1">
 <img alt="https://media.githubusercontent.com/media/jvelasc2/adi-documentation-fork/ref-design/bmse2e3wlc/docs/solutions/reference-designs/ad-bmse2e3wlc-sl/software-guide/max32625_pico_bin_upload.png" src="https://media.githubusercontent.com/media/jvelasc2/adi-documentation-fork/ref-design/bmse2e3wlc/docs/solutions/reference-designs/ad-bmse2e3wlc-sl/software-guide/max32625_pico_bin_upload.png" />
@@ -245,18 +255,22 @@ loading the ACE GUI plugin, and using the AD-BMSE2E3WLC-SL evaluation system.</p
 <p><span class="caption-number">Figure 1 </span><span class="caption-text">Uploading MAX32625_PICO.bin file</span><a class="headerlink" href="#id1" title="Link to this image"></a></p>
 </figcaption>
 </figure>
-</div></blockquote>
 <p><strong>Successful Installation Indicators:</strong></p>
-<ul class="simple">
+<blockquote>
+<div><ul class="simple">
 <li><p>The device renames to <strong>DAPLINK.</strong></p></li>
 <li><p>A <strong>MAX32666.HTM</strong> file appears in the folder.</p></li>
 </ul>
 </div></blockquote>
-<section id="using-the-pre-built-binaries-quick-flash">
-<h3>Using the Pre-built Binaries (Quick Flash)<a class="headerlink" href="#using-the-pre-built-binaries-quick-flash" title="Link to this heading"></a></h3>
+</div></blockquote>
+</li>
+</ul>
+</section>
+<section id="pre-built-binaries">
+<h3>Pre-built Binaries<a class="headerlink" href="#pre-built-binaries" title="Link to this heading"></a></h3>
 <p>Pre-built <code class="docutils literal notranslate"><span class="pre">.hex</span></code> files are provided in the <code class="docutils literal notranslate"><span class="pre">bin/</span></code> folder for supported
 boards. No additional toolchain or build setup is required. Copy the
-appropriate file onto the MAX32625PICO DAPLink debugger drive.</p>
+appropriate file onto the MAX32625PICO DAPLINK debugger drive.</p>
 <div class="table-wrapper docutils container">
 <table class="docutils align-default">
 <thead>
@@ -277,21 +291,6 @@ appropriate file onto the MAX32625PICO DAPLink debugger drive.</p>
 </tbody>
 </table>
 </div>
-<ul>
-<li><p>Download the <code class="docutils literal notranslate"><span class="pre">AD-BMSE2E3WLC-SL</span> <span class="pre">Firmware</span> <span class="pre">1.0.0</span></code> package.</p></li>
-<li><p>Copy the matching <code class="docutils literal notranslate"><span class="pre">.hex</span></code> file from <code class="docutils literal notranslate"><span class="pre">bin/</span></code> to the DAPLINK drive.</p></li>
-<li><p>The MAX32625PICO debugger flashes the MCU and remounts the drive when complete.</p>
-<blockquote>
-<div><p><strong>Verification:</strong></p>
-<blockquote>
-<div><ul class="simple">
-<li><p>A successful upload is indicated by the absence of a <strong>FAIL.TXT</strong> file
-in the DAPLINK folder.</p></li>
-</ul>
-</div></blockquote>
-</div></blockquote>
-</li>
-</ul>
 <p>These binaries are built with:</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">IIO_EXAMPLE</span> <span class="o">=</span> <span class="n">y</span>
 <span class="n">NUM_DEV</span> <span class="o">=</span> <span class="mi">2</span>
@@ -307,12 +306,65 @@ in the DAPLINK folder.</p></li>
 <p>If a different example or configuration is required, build the firmware
 binaries from source.</p>
 </section>
+<section id="flash-the-pre-built-binary-file-into-the-max32666fthr">
+<h3>Flash the Pre-built Binary File into the MAX32666FTHR<a class="headerlink" href="#flash-the-pre-built-binary-file-into-the-max32666fthr" title="Link to this heading"></a></h3>
+<ul>
+<li><p>Download the <code class="docutils literal notranslate"><span class="pre">AD-BMSE2E3WLC-SL</span> <span class="pre">Firmware</span> <span class="pre">1.0.0</span></code> package.</p></li>
+<li><p>Copy the matching <code class="docutils literal notranslate"><span class="pre">.hex</span></code> file (select based on the MCU board used) from <code class="docutils literal notranslate"><span class="pre">bin/</span></code> folder to the DAPLINK drive.</p></li>
+<li><p>The MAX32625PICO debugger flashes the MCU and remounts the drive when complete.</p>
+<blockquote>
+<div><p><strong>Verification:</strong></p>
+<blockquote>
+<div><ul class="simple">
+<li><p>A successful upload is indicated by the absence of a <strong>FAIL.TXT</strong> file
+in the DAPLINK folder.</p></li>
+</ul>
+</div></blockquote>
+</div></blockquote>
+</li>
+</ul>
 </section>
-<hr class="docutils" />
+<section id="command-line-interface">
+<h3>Command Line Interface<a class="headerlink" href="#command-line-interface" title="Link to this heading"></a></h3>
+<p>The AD-BMSE2E3WLC-SL firmware allows device monitoring and diagnostics via a command-line interface (CLI).
+For this use, a terminal emulator such as Tera Term is recommended.</p>
+<ul>
+<li><p>Open the Tera Term application (other terminal can also be used but Tera Term is recommended).</p></li>
+<li><p>Select <code class="docutils literal notranslate"><span class="pre">Serial</span></code>, then choose the correct COM Port number associated to the microcontroller.</p></li>
+<li><p>Click <code class="docutils literal notranslate"><span class="pre">Setup</span></code> tab &gt; <code class="docutils literal notranslate"><span class="pre">Serial</span> <span class="pre">Port</span></code></p>
+<blockquote>
+<div><ul class="simple">
+<li><p>Set the speed to <strong>115200</strong>.</p></li>
+<li><p>Then, click the <code class="docutils literal notranslate"><span class="pre">New</span> <span class="pre">setting</span></code> button.</p></li>
+</ul>
+</div></blockquote>
+</li>
+<li><p>Click <code class="docutils literal notranslate"><span class="pre">Setup</span></code> tab &gt; Terminal</p>
+<blockquote>
+<div><ul class="simple">
+<li><p>Under the New-line setting, set Receive to AUTO.</p></li>
+</ul>
+</div></blockquote>
+</li>
+<li><p>Click the hardware <code class="docutils literal notranslate"><span class="pre">RESET</span></code> button on the microcontroller board.</p></li>
+<li><p>The BMS data will be printed on the Tera Term terminal.</p>
+<blockquote>
+<div><p>Sample Reading:</p>
+<figure class="align-default" id="id2">
+<img alt="https://media.githubusercontent.com/media/jvelasc2/adi-documentation-fork/ref-design/bmse2e3wlc/docs/solutions/reference-designs/ad-bmse2e3wlc-sl/software-guide/sample-reading-in-CLI.png" src="https://media.githubusercontent.com/media/jvelasc2/adi-documentation-fork/ref-design/bmse2e3wlc/docs/solutions/reference-designs/ad-bmse2e3wlc-sl/software-guide/sample-reading-in-CLI.png" />
+<figcaption>
+<p><span class="caption-number">Figure 2 </span><span class="caption-text">Sample BMS Data Output</span><a class="headerlink" href="#id2" title="Link to this image"></a></p>
+</figcaption>
+</figure>
+</div></blockquote>
+</li>
+</ul>
+</section>
+</section>
 <section id="building-the-firmware-from-source">
 <h2>Building the Firmware from Source<a class="headerlink" href="#building-the-firmware-from-source" title="Link to this heading"></a></h2>
-<p>Since the AD-BMSE2E3WLC-48V baseboard is MCU-agnostic, users can swap the MAX32666FTHR MCU into any supported Maxim MCU.
-The firmware can be built from scratch by folowing the instructions below:</p>
+<p><strong>Since the AD-BMSE2E3WLC-48V baseboard is MCU-agnostic, users can swap the MAX32666FTHR MCU into any supported Maxim MCU.
+The firmware can be built from scratch by folowing the instructions below:</strong></p>
 <section id="requirements">
 <h3>Requirements<a class="headerlink" href="#requirements" title="Link to this heading"></a></h3>
 <p>Extract the contents of the downloaded <code class="docutils literal notranslate"><span class="pre">AD-BMSE2E3WLC-SL</span> <span class="pre">Firmware</span> <span class="pre">1.0.0</span></code> zip file. The package already includes no-OS and all
@@ -328,9 +380,8 @@ required sources. No git cloning or submodule initialization is required.</p>
 </pre></div>
 </div>
 <p>Install <code class="docutils literal notranslate"><span class="pre">make</span></code> for your operating system:</p>
-</section>
 <section id="windows">
-<h3>Windows<a class="headerlink" href="#windows" title="Link to this heading"></a></h3>
+<h4>Windows<a class="headerlink" href="#windows" title="Link to this heading"></a></h4>
 <p>Install Git Bash:</p>
 <blockquote>
 <div><p><a class="icon link reference external" href="https://git-scm.com/downloads" target="_blank">https://git-scm.com/downloads</a></p>
@@ -341,17 +392,18 @@ required sources. No git cloning or submodule initialization is required.</p>
 </div>
 </section>
 <section id="linux-debian-ubuntu">
-<h3>Linux (Debian/Ubuntu)<a class="headerlink" href="#linux-debian-ubuntu" title="Link to this heading"></a></h3>
+<h4>Linux (Debian/Ubuntu)<a class="headerlink" href="#linux-debian-ubuntu" title="Link to this heading"></a></h4>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">sudo</span> <span class="n">apt</span> <span class="n">install</span> <span class="n">make</span>
 </pre></div>
 </div>
 </section>
-</section>
 <section id="macos">
-<h2>macOS<a class="headerlink" href="#macos" title="Link to this heading"></a></h2>
+<h4>macOS<a class="headerlink" href="#macos" title="Link to this heading"></a></h4>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">xcode</span><span class="o">-</span><span class="n">select</span> <span class="o">--</span><span class="n">install</span>
 </pre></div>
 </div>
+</section>
+</section>
 <section id="build-requirements">
 <h3>Build Requirements<a class="headerlink" href="#build-requirements" title="Link to this heading"></a></h3>
 <section id="for-maxim-platform">
@@ -504,6 +556,7 @@ Use <code class="docutils literal notranslate"><span class="pre">max32665fthr</s
 </section>
 </section>
 </section>
+<hr class="docutils" />
 <section id="general-configuration-options">
 <h2>General Configuration Options<a class="headerlink" href="#general-configuration-options" title="Link to this heading"></a></h2>
 <div class="highlight-makefile notranslate"><div class="highlight"><pre><span></span><span class="c"># Total Number of ADBMS devices in the chain</span>
@@ -532,9 +585,8 @@ is determined at runtime by the VSEL jumper.</p>
 </ul>
 <p>Ensure the jumper position matches the hardware configuration.</p>
 </div>
-</section>
 <section id="example-measurements">
-<h2>Example Measurements<a class="headerlink" href="#example-measurements" title="Link to this heading"></a></h2>
+<h3>Example Measurements<a class="headerlink" href="#example-measurements" title="Link to this heading"></a></h3>
 <p>Available example flags:</p>
 <div class="highlight-makefile notranslate"><div class="highlight"><pre><span></span><span class="nv">ADBMS1816_BASIC</span><span class="w"> </span><span class="o">=</span><span class="w"> </span>n
 <span class="nv">ADBMS1816_BALANCING</span><span class="w"> </span><span class="o">=</span><span class="w"> </span>n
@@ -548,7 +600,7 @@ is determined at runtime by the VSEL jumper.</p>
 <p>Each example prints the device ID register values.</p>
 </div>
 <section id="adbms1816-basic">
-<h3>ADBMS1816_BASIC<a class="headerlink" href="#adbms1816-basic" title="Link to this heading"></a></h3>
+<h4>ADBMS1816_BASIC<a class="headerlink" href="#adbms1816-basic" title="Link to this heading"></a></h4>
 <p>Performs basic daisy-chain measurements using N x ADBMS1816 devices.</p>
 <p>Measures:</p>
 <blockquote>
@@ -575,7 +627,7 @@ is determined at runtime by the VSEL jumper.</p>
 </div>
 </section>
 <section id="adbms1816-balancing">
-<h3>ADBMS1816_BALANCING<a class="headerlink" href="#adbms1816-balancing" title="Link to this heading"></a></h3>
+<h4>ADBMS1816_BALANCING<a class="headerlink" href="#adbms1816-balancing" title="Link to this heading"></a></h4>
 <p>Performs PWM (Pulse Width Modulation) balancing.</p>
 <p>Key parameters:</p>
 <blockquote>
@@ -605,7 +657,7 @@ is determined at runtime by the VSEL jumper.</p>
 </div>
 </section>
 <section id="adbms1816-dcc-balancing">
-<h3>ADBMS1816_DCC_BALANCING<a class="headerlink" href="#adbms1816-dcc-balancing" title="Link to this heading"></a></h3>
+<h4>ADBMS1816_DCC_BALANCING<a class="headerlink" href="#adbms1816-dcc-balancing" title="Link to this heading"></a></h4>
 <p>Performs DCC (Direct Cell Control) balancing.</p>
 <p>Key parameters:</p>
 <blockquote>
@@ -632,7 +684,7 @@ is determined at runtime by the VSEL jumper.</p>
 </div>
 </section>
 <section id="adbms1816-fuel-gauge">
-<h3>ADBMS1816_FUEL_GAUGE<a class="headerlink" href="#adbms1816-fuel-gauge" title="Link to this heading"></a></h3>
+<h4>ADBMS1816_FUEL_GAUGE<a class="headerlink" href="#adbms1816-fuel-gauge" title="Link to this heading"></a></h4>
 <p>Estimates:</p>
 <blockquote>
 <div><ul class="simple">
@@ -665,54 +717,22 @@ is determined at runtime by the VSEL jumper.</p>
 </div>
 </section>
 </section>
-<section id="iio-example">
-<h2>IIO_EXAMPLE<a class="headerlink" href="#iio-example" title="Link to this heading"></a></h2>
-<p>Provides an IIO (Industrial I/O) interface for the ADBMS1816 device.</p>
-<p>Exposed channels include:</p>
-<blockquote>
-<div><ul class="simple">
-<li><p>Cell voltages</p></li>
-<li><p>VSTACK</p></li>
-<li><p>Current</p></li>
-<li><p>Auxiliary voltages</p></li>
-<li><p>Temperature</p></li>
-<li><p>Fuel-gauge SoC/SoH</p></li>
-<li><p>DCC balancing control</p></li>
-</ul>
-</div></blockquote>
-<p>IIO debug attributes:</p>
-<blockquote>
-<div><ul class="simple">
-<li><p><code class="docutils literal notranslate"><span class="pre">dcc_mask_dev0</span></code></p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">dcc_mask_dev1</span></code></p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">dcc_timeout</span></code></p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">dcc_clear</span></code></p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">dcc_mute</span></code></p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">dcc_unmute</span></code></p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">core_state</span></code></p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">soc_pack_dev0</span></code></p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">soh_pack_dev0</span></code></p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">cycle_count_dev0</span></code></p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">fuel_gauge_reset</span></code></p></li>
-</ul>
-</div></blockquote>
-<div class="line-block">
-<div class="line"><br /></div>
-</div>
 </section>
 <hr class="docutils" />
-<section id="gui-setup">
-<h2>GUI Setup<a class="headerlink" href="#gui-setup" title="Link to this heading"></a></h2>
+<section id="graphical-user-interface-gui">
+<h2>Graphical User Interface (GUI)<a class="headerlink" href="#graphical-user-interface-gui" title="Link to this heading"></a></h2>
+<section id="setup">
+<h3>Setup<a class="headerlink" href="#setup" title="Link to this heading"></a></h3>
 <p><strong>Step 1: Download Required Files</strong></p>
 <blockquote>
 <div><ul class="simple">
 <li><p>Download the plugin package: <strong>Board.ADBMSE2E3WLC ACEZIP.zip</strong> (save locally)</p></li>
 <li><p>Download the latest <a class="icon adi reference external" href="https://www.analog.com/ace" target="_blank">ACE software</a> from Analog Devices.</p></li>
 </ul>
-<figure class="align-default" id="id2">
+<figure class="align-default" id="id3">
 <img alt="https://media.githubusercontent.com/media/jvelasc2/adi-documentation-fork/ref-design/bmse2e3wlc/docs/solutions/reference-designs/ad-bmse2e3wlc-sl/software-guide/ace-software-download.png" src="https://media.githubusercontent.com/media/jvelasc2/adi-documentation-fork/ref-design/bmse2e3wlc/docs/solutions/reference-designs/ad-bmse2e3wlc-sl/software-guide/ace-software-download.png" />
 <figcaption>
-<p><span class="caption-number">Figure 2 </span><span class="caption-text">ACE Software Download</span><a class="headerlink" href="#id2" title="Link to this image"></a></p>
+<p><span class="caption-number">Figure 3 </span><span class="caption-text">ACE Software Download</span><a class="headerlink" href="#id3" title="Link to this image"></a></p>
 </figcaption>
 </figure>
 </div></blockquote>
@@ -723,19 +743,19 @@ is determined at runtime by the VSEL jumper.</p>
 <li><p>Follow on-screen installation steps, as shown in the following
 figures:</p></li>
 </ul>
-<figure class="align-default" id="id3">
+<figure class="align-default" id="id4">
 <img alt="https://media.githubusercontent.com/media/jvelasc2/adi-documentation-fork/ref-design/bmse2e3wlc/docs/solutions/reference-designs/ad-bmse2e3wlc-sl/software-guide/ace-software-installation.png" src="https://media.githubusercontent.com/media/jvelasc2/adi-documentation-fork/ref-design/bmse2e3wlc/docs/solutions/reference-designs/ad-bmse2e3wlc-sl/software-guide/ace-software-installation.png" />
 <figcaption>
-<p><span class="caption-number">Figure 3 </span><span class="caption-text">ACE Software Installation Steps</span><a class="headerlink" href="#id3" title="Link to this image"></a></p>
+<p><span class="caption-number">Figure 4 </span><span class="caption-text">ACE Software Installation Steps</span><a class="headerlink" href="#id4" title="Link to this image"></a></p>
 </figcaption>
 </figure>
 <ul class="simple">
 <li><p>Verify installation via the Start Menu.</p></li>
 </ul>
-<figure class="align-center" id="id4">
+<figure class="align-center" id="id5">
 <img alt="https://media.githubusercontent.com/media/jvelasc2/adi-documentation-fork/ref-design/bmse2e3wlc/docs/solutions/reference-designs/ad-bmse2e3wlc-sl/software-guide/ace-on-start-menu.png" src="https://media.githubusercontent.com/media/jvelasc2/adi-documentation-fork/ref-design/bmse2e3wlc/docs/solutions/reference-designs/ad-bmse2e3wlc-sl/software-guide/ace-on-start-menu.png" />
 <figcaption>
-<p><span class="caption-number">Figure 4 </span><span class="caption-text">ACE Software Start Menu Verification</span><a class="headerlink" href="#id4" title="Link to this image"></a></p>
+<p><span class="caption-number">Figure 5 </span><span class="caption-text">ACE Software Start Menu Verification</span><a class="headerlink" href="#id5" title="Link to this image"></a></p>
 </figcaption>
 </figure>
 </div></blockquote>
@@ -754,13 +774,14 @@ figures:</p></li>
 <li><p>Continue to load the plugin.</p></li>
 </ul>
 </div></blockquote>
-<figure class="align-default" id="id5">
+<figure class="align-default" id="id6">
 <img alt="https://media.githubusercontent.com/media/jvelasc2/adi-documentation-fork/ref-design/bmse2e3wlc/docs/solutions/reference-designs/ad-bmse2e3wlc-sl/software-guide/ACEZIP-file.png" src="https://media.githubusercontent.com/media/jvelasc2/adi-documentation-fork/ref-design/bmse2e3wlc/docs/solutions/reference-designs/ad-bmse2e3wlc-sl/software-guide/ACEZIP-file.png" />
 <figcaption>
-<p><span class="caption-number">Figure 5 </span><span class="caption-text">BMSE2E3WLC-SL Plugin</span><a class="headerlink" href="#id5" title="Link to this image"></a></p>
+<p><span class="caption-number">Figure 6 </span><span class="caption-text">BMSE2E3WLC-SL Plugin</span><a class="headerlink" href="#id6" title="Link to this image"></a></p>
 </figcaption>
 </figure>
 </div></blockquote>
+</section>
 <section id="launching-and-configuring-the-gui">
 <h3>Launching and Configuring the GUI<a class="headerlink" href="#launching-and-configuring-the-gui" title="Link to this heading"></a></h3>
 <blockquote>
@@ -769,10 +790,10 @@ figures:</p></li>
 <li><p>Launch ACE and <strong>double-click the plugin</strong>.</p></li>
 <li><p>Open <strong>Settings</strong> (highlighted in GUI).</p></li>
 </ul>
-<figure class="align-default" id="id6">
+<figure class="align-default" id="id7">
 <img alt="https://media.githubusercontent.com/media/jvelasc2/adi-documentation-fork/ref-design/bmse2e3wlc/docs/solutions/reference-designs/ad-bmse2e3wlc-sl/software-guide/ACE-homepage.png" src="https://media.githubusercontent.com/media/jvelasc2/adi-documentation-fork/ref-design/bmse2e3wlc/docs/solutions/reference-designs/ad-bmse2e3wlc-sl/software-guide/ACE-homepage.png" />
 <figcaption>
-<p><span class="caption-number">Figure 6 </span><span class="caption-text">ACE GUI Homepage</span><a class="headerlink" href="#id6" title="Link to this image"></a></p>
+<p><span class="caption-number">Figure 7 </span><span class="caption-text">ACE GUI Homepage</span><a class="headerlink" href="#id7" title="Link to this image"></a></p>
 </figcaption>
 </figure>
 </div></blockquote>
@@ -781,10 +802,10 @@ figures:</p></li>
 <div><ul class="simple">
 <li><p>Open <strong>Device Manager</strong> and note the <strong>COM port number</strong>.</p></li>
 </ul>
-<figure class="align-default" id="id7">
+<figure class="align-default" id="id8">
 <img alt="https://media.githubusercontent.com/media/jvelasc2/adi-documentation-fork/ref-design/bmse2e3wlc/docs/solutions/reference-designs/ad-bmse2e3wlc-sl/software-guide/device-manager-comport.png" src="https://media.githubusercontent.com/media/jvelasc2/adi-documentation-fork/ref-design/bmse2e3wlc/docs/solutions/reference-designs/ad-bmse2e3wlc-sl/software-guide/device-manager-comport.png" />
 <figcaption>
-<p><span class="caption-number">Figure 7 </span><span class="caption-text">Device Manager COM Port Detection</span><a class="headerlink" href="#id7" title="Link to this image"></a></p>
+<p><span class="caption-number">Figure 8 </span><span class="caption-text">Device Manager COM Port Detection</span><a class="headerlink" href="#id8" title="Link to this image"></a></p>
 </figcaption>
 </figure>
 </div></blockquote>
@@ -794,20 +815,20 @@ figures:</p></li>
 <li><p>Set <strong>Protocol = IIO</strong>, then <code class="docutils literal notranslate"><span class="pre">Enable</span></code> the port.</p></li>
 <li><p>Click <code class="docutils literal notranslate"><span class="pre">OK</span></code>.</p>
 <blockquote>
-<div><figure class="align-default" id="id8">
+<div><figure class="align-default" id="id9">
 <img alt="https://media.githubusercontent.com/media/jvelasc2/adi-documentation-fork/ref-design/bmse2e3wlc/docs/solutions/reference-designs/ad-bmse2e3wlc-sl/software-guide/ace-serial-ports-config.png" src="https://media.githubusercontent.com/media/jvelasc2/adi-documentation-fork/ref-design/bmse2e3wlc/docs/solutions/reference-designs/ad-bmse2e3wlc-sl/software-guide/ace-serial-ports-config.png" />
 <figcaption>
-<p><span class="caption-number">Figure 8 </span><span class="caption-text">ACE Serial Port Settings</span><a class="headerlink" href="#id8" title="Link to this image"></a></p>
+<p><span class="caption-number">Figure 9 </span><span class="caption-text">ACE Serial Port Settings</span><a class="headerlink" href="#id9" title="Link to this image"></a></p>
 </figcaption>
 </figure>
 </div></blockquote>
 </li>
 <li><p>Restart ACE.</p>
 <p>Expected Result: Plugin <strong>AD-BMSE2E3WLC-48V</strong> appears.</p>
-<figure class="align-default" id="id9">
+<figure class="align-default" id="id10">
 <img alt="https://media.githubusercontent.com/media/jvelasc2/adi-documentation-fork/ref-design/bmse2e3wlc/docs/solutions/reference-designs/ad-bmse2e3wlc-sl/software-guide/ad-bmse2e3wlc-48v-plugin.png" src="https://media.githubusercontent.com/media/jvelasc2/adi-documentation-fork/ref-design/bmse2e3wlc/docs/solutions/reference-designs/ad-bmse2e3wlc-sl/software-guide/ad-bmse2e3wlc-48v-plugin.png" />
 <figcaption>
-<p><span class="caption-number">Figure 9 </span><span class="caption-text">ACE Plugin Detection</span><a class="headerlink" href="#id9" title="Link to this image"></a></p>
+<p><span class="caption-number">Figure 10 </span><span class="caption-text">ACE Plugin Detection</span><a class="headerlink" href="#id10" title="Link to this image"></a></p>
 </figcaption>
 </figure>
 </li>
@@ -822,10 +843,10 @@ figures:</p></li>
 <ol class="arabic">
 <li><p>Open <code class="docutils literal notranslate"><span class="pre">Control</span> <span class="pre">Panel</span></code> → <code class="docutils literal notranslate"><span class="pre">Programs</span> <span class="pre">and</span> <span class="pre">Features</span></code> (or Settings → Apps → Installed Apps).</p>
 <blockquote>
-<div><figure class="align-default" id="id10">
+<div><figure class="align-default" id="id11">
 <img alt="https://media.githubusercontent.com/media/jvelasc2/adi-documentation-fork/ref-design/bmse2e3wlc/docs/solutions/reference-designs/ad-bmse2e3wlc-sl/software-guide/libiio-check.png" src="https://media.githubusercontent.com/media/jvelasc2/adi-documentation-fork/ref-design/bmse2e3wlc/docs/solutions/reference-designs/ad-bmse2e3wlc-sl/software-guide/libiio-check.png" />
 <figcaption>
-<p><span class="caption-number">Figure 10 </span><span class="caption-text">Control Panel - Programs and Features</span><a class="headerlink" href="#id10" title="Link to this image"></a></p>
+<p><span class="caption-number">Figure 11 </span><span class="caption-text">Control Panel - Programs and Features</span><a class="headerlink" href="#id11" title="Link to this image"></a></p>
 </figcaption>
 </figure>
 </div></blockquote>
@@ -833,10 +854,10 @@ figures:</p></li>
 <li><p>Locate libiio in the list of installed programs.</p></li>
 <li><p>Verify that the installed version is <strong>0.26</strong>.</p>
 <blockquote>
-<div><figure class="align-default" id="id11">
+<div><figure class="align-default" id="id12">
 <img alt="https://media.githubusercontent.com/media/jvelasc2/adi-documentation-fork/ref-design/bmse2e3wlc/docs/solutions/reference-designs/ad-bmse2e3wlc-sl/software-guide/libiio-version.png" src="https://media.githubusercontent.com/media/jvelasc2/adi-documentation-fork/ref-design/bmse2e3wlc/docs/solutions/reference-designs/ad-bmse2e3wlc-sl/software-guide/libiio-version.png" />
 <figcaption>
-<p><span class="caption-number">Figure 11 </span><span class="caption-text">Installed libiio Version Check</span><a class="headerlink" href="#id11" title="Link to this image"></a></p>
+<p><span class="caption-number">Figure 12 </span><span class="caption-text">Installed libiio Version Check</span><a class="headerlink" href="#id12" title="Link to this image"></a></p>
 </figcaption>
 </figure>
 </div></blockquote>
@@ -849,17 +870,17 @@ If an earlier version is installed (for example, v0.25), please upgrade to v0.26
 </section>
 </section>
 <hr class="docutils" />
-<section id="gui-overview">
-<h2>GUI Overview<a class="headerlink" href="#gui-overview" title="Link to this heading"></a></h2>
+<section id="gui-parts-overview">
+<h2>GUI Parts Overview<a class="headerlink" href="#gui-parts-overview" title="Link to this heading"></a></h2>
 <p>The AD-BMSE2E3WLC-SL GUI provides real-time monitoring of
 battery-pack parameters, cell voltages, current measurements,
 operating state, and temperature information. The dashboard is
 designed to provide a quick overview of battery health and
 system status during evaluation and testing.</p>
-<figure class="align-default" id="id12">
+<figure class="align-default" id="id13">
 <img alt="https://media.githubusercontent.com/media/jvelasc2/adi-documentation-fork/ref-design/bmse2e3wlc/docs/solutions/reference-designs/ad-bmse2e3wlc-sl/software-guide/AD-BMSE2E3WLC-SL_GUI.png" src="https://media.githubusercontent.com/media/jvelasc2/adi-documentation-fork/ref-design/bmse2e3wlc/docs/solutions/reference-designs/ad-bmse2e3wlc-sl/software-guide/AD-BMSE2E3WLC-SL_GUI.png" />
 <figcaption>
-<p><span class="caption-number">Figure 12 </span><span class="caption-text">AD-BMSE2E3WLC-SL GUI</span><a class="headerlink" href="#id12" title="Link to this image"></a></p>
+<p><span class="caption-number">Figure 13 </span><span class="caption-text">AD-BMSE2E3WLC-SL GUI</span><a class="headerlink" href="#id13" title="Link to this image"></a></p>
 </figcaption>
 </figure>
 <section id="main-dashboard-layout">
@@ -1088,10 +1109,10 @@ AD-BMSE2E3WLC-SL evaluation.</p>
 <li><p>Stack voltage: decreases</p></li>
 </ul>
 </div></blockquote>
-<figure class="align-default" id="id13">
+<figure class="align-default" id="id14">
 <img alt="https://media.githubusercontent.com/media/jvelasc2/adi-documentation-fork/ref-design/bmse2e3wlc/docs/solutions/reference-designs/ad-bmse2e3wlc-sl/software-guide/minimum-voltage-test.png" src="https://media.githubusercontent.com/media/jvelasc2/adi-documentation-fork/ref-design/bmse2e3wlc/docs/solutions/reference-designs/ad-bmse2e3wlc-sl/software-guide/minimum-voltage-test.png" />
 <figcaption>
-<p><span class="caption-number">Figure 13 </span><span class="caption-text">AD-BMSE2E3WLC-SL Minimum Voltage Test</span><a class="headerlink" href="#id13" title="Link to this image"></a></p>
+<p><span class="caption-number">Figure 14 </span><span class="caption-text">AD-BMSE2E3WLC-SL Minimum Voltage Test</span><a class="headerlink" href="#id14" title="Link to this image"></a></p>
 </figcaption>
 </figure>
 </div></blockquote>
@@ -1106,10 +1127,10 @@ AD-BMSE2E3WLC-SL evaluation.</p>
 <li><p>Cell voltage: <strong>4.0V to 5.0V</strong></p></li>
 <li><p>Stack voltage: increases</p></li>
 </ul>
-<figure class="align-default" id="id14">
+<figure class="align-default" id="id15">
 <img alt="https://media.githubusercontent.com/media/jvelasc2/adi-documentation-fork/ref-design/bmse2e3wlc/docs/solutions/reference-designs/ad-bmse2e3wlc-sl/software-guide/maximum-voltage-test.png" src="https://media.githubusercontent.com/media/jvelasc2/adi-documentation-fork/ref-design/bmse2e3wlc/docs/solutions/reference-designs/ad-bmse2e3wlc-sl/software-guide/maximum-voltage-test.png" />
 <figcaption>
-<p><span class="caption-number">Figure 14 </span><span class="caption-text">AD-BMSE2E3WLC-SL Maximum Voltage Test</span><a class="headerlink" href="#id14" title="Link to this image"></a></p>
+<p><span class="caption-number">Figure 15 </span><span class="caption-text">AD-BMSE2E3WLC-SL Maximum Voltage Test</span><a class="headerlink" href="#id15" title="Link to this image"></a></p>
 </figcaption>
 </figure>
 </div></blockquote>
@@ -1137,17 +1158,17 @@ AD-BMSE2E3WLC-SL evaluation.</p>
 <li><p>Set <strong>Vehicle State = Driving</strong>.</p></li>
 <li><p>Verify voltage again.</p></li>
 </ul>
-<figure class="align-default" id="id15">
+<figure class="align-default" id="id16">
 <img alt="https://media.githubusercontent.com/media/jvelasc2/adi-documentation-fork/ref-design/bmse2e3wlc/docs/solutions/reference-designs/ad-bmse2e3wlc-sl/software-guide/driving-mode-pd.png" src="https://media.githubusercontent.com/media/jvelasc2/adi-documentation-fork/ref-design/bmse2e3wlc/docs/solutions/reference-designs/ad-bmse2e3wlc-sl/software-guide/driving-mode-pd.png" />
 <figcaption>
-<p><span class="caption-number">Figure 15 </span><span class="caption-text">AD-BMSE2E3WLC-SL Power Delivery Test - “Driving” Mode</span><a class="headerlink" href="#id15" title="Link to this image"></a></p>
+<p><span class="caption-number">Figure 16 </span><span class="caption-text">AD-BMSE2E3WLC-SL Power Delivery Test - “Driving” Mode</span><a class="headerlink" href="#id16" title="Link to this image"></a></p>
 </figcaption>
 </figure>
 <p><strong>Vehicle State = Parked</strong></p>
-<figure class="align-default" id="id16">
+<figure class="align-default" id="id17">
 <img alt="https://media.githubusercontent.com/media/jvelasc2/adi-documentation-fork/ref-design/bmse2e3wlc/docs/solutions/reference-designs/ad-bmse2e3wlc-sl/software-guide/parked-mode-pd.png" src="https://media.githubusercontent.com/media/jvelasc2/adi-documentation-fork/ref-design/bmse2e3wlc/docs/solutions/reference-designs/ad-bmse2e3wlc-sl/software-guide/parked-mode-pd.png" />
 <figcaption>
-<p><span class="caption-number">Figure 16 </span><span class="caption-text">AD-BMSE2E3WLC-SL Power Delivery Test - “Parked” Mode</span><a class="headerlink" href="#id16" title="Link to this image"></a></p>
+<p><span class="caption-number">Figure 17 </span><span class="caption-text">AD-BMSE2E3WLC-SL Power Delivery Test - “Parked” Mode</span><a class="headerlink" href="#id17" title="Link to this image"></a></p>
 </figcaption>
 </figure>
 </div></blockquote>
