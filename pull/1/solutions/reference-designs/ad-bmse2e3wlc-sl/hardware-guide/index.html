@@ -8,7 +8,7 @@
 
     <title>Hardware Guide &#8212; System Level Documentation  documentation</title>
     <link rel="stylesheet" type="text/css" href="../../../../_static/pygments.css?v=8e8a900e" />
-    <link rel="stylesheet" type="text/css" href="../../../../_static/app.min.css?v=d3f78147" />
+    <link rel="stylesheet" type="text/css" href="../../../../_static/app.min.css?v=cae2157c" />
     <link rel="stylesheet" type="text/css" href="../../../../_static/custom.css?v=5f9cb17c" />
     <script async="async" src="../../../../_static/app.umd.js?v=26d0298f"></script>
     <link rel="icon" href="../../../../_static/icon.svg"/>
@@ -67,10 +67,10 @@
     </div>
     <div id="right">
       <span>
-        <a id="logo-org" href="https://analog.com" aria-label="Analog Devices Inc. landing page"></a>
+        <a id="logo-org" href="https://developer.analog.com/" aria-label="Analog Devices Inc. landing page"></a>
         <div class="vertical-divider"></div>
         
-        <label id="show-repotoc" for="input-show-repotoc" title="Show/hide docs">Docs</label>
+        <label id="show-repotoc" for="input-show-repotoc" title="Show/hide docs">Documentation</label>
         
         <a id="logo" href="../../../../index.html">
           <div>System Level</div>
@@ -215,12 +215,12 @@ positive side</p></td>
 <tr class="row-even"><td><p>6a</p></td>
 <td><p>Arduino
 Headers</p></td>
-<td><p>Arduino Header Connector left side</p></td>
+<td><p>Arduino header connector left side</p></td>
 </tr>
 <tr class="row-odd"><td><p>6b</p></td>
 <td><p>Arduino
 Headers</p></td>
-<td><p>Arduino Header Connector right side</p></td>
+<td><p>Arduino header connector right side</p></td>
 </tr>
 <tr class="row-even"><td><p>7</p></td>
 <td><p>Featherwing
@@ -241,11 +241,11 @@ Connectors</p></td>
 </tr>
 <tr class="row-odd"><td><p>10</p></td>
 <td><p>ADG701</p></td>
-<td><p>5V switch USB enabled</p></td>
+<td><p>5V switch, USB-enabled</p></td>
 </tr>
 <tr class="row-even"><td><p>11</p></td>
 <td><p>LTC7138</p></td>
-<td><p>5V Analog and 5V digital LDO Regulator</p></td>
+<td><p>5V analog and 5V digital LDO regulator</p></td>
 </tr>
 <tr class="row-odd"><td><p>12</p></td>
 <td><p>V+ Output
@@ -368,12 +368,12 @@ Connector</p></td>
 <section id="required-hardware">
 <h2>Required Hardware<a class="headerlink" href="#required-hardware" title="Link to this heading"></a></h2>
 <ul class="simple">
-<li><p>1 × AD-BMSE2E3WLC-48V Baseboard</p></li>
-<li><p>1 × EVAL-ADBMS1816WLC Daughter Board</p></li>
-<li><p>2 × DC2472A Battery Emulator</p></li>
-<li><p>1 × MAX32666FTHR Microcontroller</p></li>
-<li><p>1 × MAX32625PICO Programming Board</p></li>
-<li><p>2 × isoSPI twisted-pair cables</p></li>
+<li><p>1 × <a class="icon adi reference external" href="https://www.analog.com/AD-BMSE2E3WLC-48V" target="_blank">AD-BMSE2E3WLC-48V</a> Baseboard</p></li>
+<li><p>1 × <a class="icon adi reference external" href="https://www.analog.com/EVAL-ADBMS1816WLC" target="_blank">EVAL-ADBMS1816WLC</a> Daughter Board</p></li>
+<li><p>2 × <a class="icon adi reference external" href="https://www.analog.com/DC2472A" target="_blank">DC2472A</a> Battery Emulator</p></li>
+<li><p>1 × <a class="icon adi reference external" href="https://www.analog.com/MAX32666FTHR" target="_blank">MAX32666FTHR</a> Microcontroller</p></li>
+<li><p>1 × <a class="icon adi reference external" href="https://www.analog.com/MAX32625PICO" target="_blank">MAX32625PICO</a> Programming Board</p></li>
+<li><p>2 × <a class="icon adi reference external" href="https://www.analog.com/isoSPI" target="_blank">isoSPI</a> twisted-pair cables</p></li>
 <li><p>1 × 10-pin SWD debugger cable</p></li>
 <li><p>3 × Micro-USB to USB cables</p></li>
 <li><p>1 × PC/Laptop</p></li>
@@ -417,12 +417,12 @@ figure below for proper shunt configuration.</p>
 <h3>Battery Emulator Setup<a class="headerlink" href="#battery-emulator-setup" title="Link to this heading"></a></h3>
 <div class="admonition note">
 <p class="admonition-title">Note</p>
-<p>The DC2472A Battery Emulator Board is used for cell voltage
+<p>The <a class="icon adi reference external" href="https://www.analog.com/DC2472A" target="_blank">DC2472A</a> Battery Emulator Board is used for cell voltage
 input in this setup.</p>
 </div>
 <ul>
 <li><p>Plug the screw-terminal block into the cell voltage connector of the
-two DC2472A battery emulators.</p></li>
+two <a class="icon adi reference external" href="https://www.analog.com/DC2472A" target="_blank">DC2472A</a> battery emulators.</p></li>
 <li><p>Connect the first DC2472A battery emulator to the AD-BMSE2E3WLC-48V
 Baseboard through the cell connector.</p>
 <figure class="align-default" id="id6">
@@ -433,7 +433,7 @@ Baseboard through the cell connector.</p>
 </figcaption>
 </figure>
 </li>
-<li><p>Connect the second DC2472A battery emulator to the EVAL-ADBMS1816WLC
+<li><p>Connect the second <a class="icon adi reference external" href="https://www.analog.com/DC2472A" target="_blank">DC2472A</a> battery emulator to the <a class="icon adi reference external" href="https://www.analog.com/EVAL-ADBMS1816WLC" target="_blank">EVAL-ADBMS1816WLC</a>
 Daughter Board through the cell connector.</p>
 <figure class="align-default" id="id7">
 <a class="reference internal image-reference" href="https://media.githubusercontent.com/media/jvelasc2/adi-documentation-fork/ref-design/bmse2e3wlc/docs/solutions/reference-designs/ad-bmse2e3wlc-sl/hardware-guide/daughterboard-to-emulator.png"><img alt="https://media.githubusercontent.com/media/jvelasc2/adi-documentation-fork/ref-design/bmse2e3wlc/docs/solutions/reference-designs/ad-bmse2e3wlc-sl/hardware-guide/daughterboard-to-emulator.png" src="https://media.githubusercontent.com/media/jvelasc2/adi-documentation-fork/ref-design/bmse2e3wlc/docs/solutions/reference-designs/ad-bmse2e3wlc-sl/hardware-guide/daughterboard-to-emulator.png" style="width: 600px;" />
@@ -443,7 +443,7 @@ Daughter Board through the cell connector.</p>
 </figcaption>
 </figure>
 </li>
-<li><p>Connect a 5V external power source to the DC2472A (J1) using a USB
+<li><p>Connect a 5V external power source to the <a class="icon adi reference external" href="https://www.analog.com/DC2472A" target="_blank">DC2472A</a> (J1) using a USB
 cable. External power supply is recommended for adequate power.</p></li>
 <li><p>Alternatively, power it through a PC using a USB cable.</p></li>
 </ul>
@@ -485,8 +485,8 @@ cable. External power supply is recommended for adequate power.</p></li>
 <section id="microcontroller-connection">
 <h3>Microcontroller Connection<a class="headerlink" href="#microcontroller-connection" title="Link to this heading"></a></h3>
 <ul>
-<li><p>Attach the MAX32666FTHR microcontroller to the AD-BMSE2E3WLC-48V
-Baseboard through the Featherwing connector.</p>
+<li><p>Attach the <a class="icon adi reference external" href="https://www.analog.com/MAX32666FTHR" target="_blank">MAX32666FTHR</a> microcontroller to the <a class="icon adi reference external" href="https://www.analog.com/AD-BMSE2E3WLC-48V" target="_blank">AD-BMSE2E3WLC-48V</a>
+baseboard through the Featherwing connector.</p>
 <figure class="align-default" id="id10">
 <a class="reference internal image-reference" href="https://media.githubusercontent.com/media/jvelasc2/adi-documentation-fork/ref-design/bmse2e3wlc/docs/solutions/reference-designs/ad-bmse2e3wlc-sl/hardware-guide/max32666fthr-connection.png"><img alt="https://media.githubusercontent.com/media/jvelasc2/adi-documentation-fork/ref-design/bmse2e3wlc/docs/solutions/reference-designs/ad-bmse2e3wlc-sl/hardware-guide/max32666fthr-connection.png" src="https://media.githubusercontent.com/media/jvelasc2/adi-documentation-fork/ref-design/bmse2e3wlc/docs/solutions/reference-designs/ad-bmse2e3wlc-sl/hardware-guide/max32666fthr-connection.png" style="width: 600px;" />
 </a>
@@ -501,7 +501,7 @@ Baseboard through the Featherwing connector.</p>
 <h3>48V Connection<a class="headerlink" href="#v-connection" title="Link to this heading"></a></h3>
 <ul>
 <li><p>Connect the red alligator to banana jack cable between <strong>48V</strong> and
-<strong>TP11</strong> on the AD-BMSE2E3WLC-48VV as shown below.</p>
+<strong>TP11</strong> on the <a class="icon adi reference external" href="https://www.analog.com/AD-BMSE2E3WLC-48V" target="_blank">AD-BMSE2E3WLC-48V</a> as shown below.</p>
 <figure class="align-default" id="id11">
 <img alt="https://media.githubusercontent.com/media/jvelasc2/adi-documentation-fork/ref-design/bmse2e3wlc/docs/solutions/reference-designs/ad-bmse2e3wlc-sl/hardware-guide/48V-connection.png" src="https://media.githubusercontent.com/media/jvelasc2/adi-documentation-fork/ref-design/bmse2e3wlc/docs/solutions/reference-designs/ad-bmse2e3wlc-sl/hardware-guide/48V-connection.png" />
 <figcaption>
@@ -515,15 +515,15 @@ Baseboard through the Featherwing connector.</p>
 <h3>Cable and PC Connection<a class="headerlink" href="#cable-and-pc-connection" title="Link to this heading"></a></h3>
 <blockquote>
 <div><dl class="simple">
-<dt>(A). Plug the micro-USB cable to the first DC2472A battery emulator</dt><dd><p>that is connected to AD-BMSE2E3WLC-48V.</p>
+<dt>(A). Plug the micro-USB cable to the first <a class="icon adi reference external" href="https://www.analog.com/DC2472A" target="_blank">DC2472A</a> battery emulator</dt><dd><p>that is connected to the <a class="icon adi reference external" href="https://www.analog.com/AD-BMSE2E3WLC-48V" target="_blank">AD-BMSE2E3WLC-48V</a> baseboard.</p>
 </dd>
-<dt>(B). Plug the micro-USB cable to the second DC2472A battery emulator</dt><dd><p>that is connected to EVAL-ADBMS1816WLC.</p>
+<dt>(B). Plug the micro-USB cable to the second <a class="icon adi reference external" href="https://www.analog.com/DC2472A" target="_blank">DC2472A</a> battery emulator</dt><dd><p>that is connected to the <a class="icon adi reference external" href="https://www.analog.com/EVAL-ADBMS1816WLC" target="_blank">EVAL-ADBMS1816WLC</a> daughterboard.</p>
 </dd>
 </dl>
-<p>(C). Plug the micro-USB cable into the MAX32666FTHR.</p>
-<p>(D). Connect the 2-wire isoSPI cable from P10 of AD-BMSE2E3WLC-48V.</p>
+<p>(C). Plug the micro-USB cable into the <a class="icon adi reference external" href="https://www.analog.com/MAX32666FTHR" target="_blank">MAX32666FTHR</a> microcontroller.</p>
+<p>(D). Connect the 2-wire isoSPI cable from P10 of the <a class="icon adi reference external" href="https://www.analog.com/AD-BMSE2E3WLC-48V" target="_blank">AD-BMSE2E3WLC-48V</a> baseboard.</p>
 <dl class="simple">
-<dt>(E). Connect the other end of the 2-wire isoSPI cable to P10 of</dt><dd><p>EVAL-ADBMS1816WLC.</p>
+<dt>(E). Connect the other end of the 2-wire isoSPI cable to P10 of</dt><dd><p>the <a class="icon adi reference external" href="https://www.analog.com/EVAL-ADBMS1816WLC" target="_blank">EVAL-ADBMS1816WLC</a> daughterboard.</p>
 </dd>
 </dl>
 <p>(F). Connect all USB cables to a USB hub (preferred).</p>
@@ -544,7 +544,7 @@ directly without a USB hub.</p>
 <div class="line-block">
 <div class="line"><br /></div>
 </div>
-<p>The AD-BMSE2E3WLC-SL comes complete with firmware and easy-to-use application GUI.
+<p>The <a class="icon adi reference external" href="https://www.analog.com/AD-BMSE2E3WLC-SL" target="_blank">AD-BMSE2E3WLC-SL</a> comes complete with firmware and easy-to-use application GUI.
 Access the software resources and see the setup procedure in the
 <a class="reference internal" href="../software-guide/index.html#ad-bmse2e3wlc-sl-software"><span class="std std-ref">AD-BMSE2E3WLC-SL Software User Guide</span></a>.</p>
 </section>

@@ -8,7 +8,7 @@
 
     <title>AD-BMSE2E3WLC-SL &#8212; System Level Documentation  documentation</title>
     <link rel="stylesheet" type="text/css" href="../../../_static/pygments.css?v=8e8a900e" />
-    <link rel="stylesheet" type="text/css" href="../../../_static/app.min.css?v=d3f78147" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/app.min.css?v=cae2157c" />
     <link rel="stylesheet" type="text/css" href="../../../_static/custom.css?v=5f9cb17c" />
     <script async="async" src="../../../_static/app.umd.js?v=26d0298f"></script>
     <link rel="icon" href="../../../_static/icon.svg"/>
@@ -67,10 +67,10 @@
     </div>
     <div id="right">
       <span>
-        <a id="logo-org" href="https://analog.com" aria-label="Analog Devices Inc. landing page"></a>
+        <a id="logo-org" href="https://developer.analog.com/" aria-label="Analog Devices Inc. landing page"></a>
         <div class="vertical-divider"></div>
         
-        <label id="show-repotoc" for="input-show-repotoc" title="Show/hide docs">Docs</label>
+        <label id="show-repotoc" for="input-show-repotoc" title="Show/hide docs">Documentation</label>
         
         <a id="logo" href="../../../index.html">
           <div>System Level</div>
@@ -182,19 +182,19 @@ Applications</p>
 for medium to high-end Battery Management System (BMS) applications in
 Electric 2-Wheeler (E2W) and Electric 3-Wheeler (E3W) markets. Operating
 within a voltage range of 36V to 96V and supporting currents up to 100A,
-this reference design leverages the automotive-grade ADBMS1816
+this reference design leverages the automotive-grade <a class="icon adi reference external" href="https://www.analog.com/ADBMS1816" target="_blank">ADBMS1816W</a>
 integrated circuit with comprehensive cell and current sensing
 capabilities.</p>
 <p>The system features built-in charge/discharge circuitry supporting both
-high-side and low-side current sensing. An integrated microcontroller
-unit (MCU) handles computational operations required for BMS
-functionality and provides USB-to-SPI communication for GUI interaction.
-The modular, stackable design offers flexibility to utilize
+high-side and low-side current sensing. It includes a compatible microcontroller
+board that handles computational operations required for BMS functionality and
+provides USB-to-SPI communication for GUI interaction.</p>
+<p>The modular, stackable design offers flexibility to utilize
 customer-preferred MCUs through standard Arduino/Feather board form
 factors.</p>
-<p>The reference design includes firmware example codes and a comprehensive
-GUI, both available as open-source resources via GitHub, enabling rapid
-prototyping and evaluation of BMS solutions.</p>
+<p>The reference design also includes open-source firmware example codes
+and a comprehensive GUI, enabling rapid prototyping and
+evaluation of BMS solutions.</p>
 </section>
 <section id="features">
 <h2>Features<a class="headerlink" href="#features" title="Link to this heading"></a></h2>
@@ -202,14 +202,15 @@ prototyping and evaluation of BMS solutions.</p>
 <blockquote>
 <div><ul class="simple">
 <li><p>can operate from 36V to 96V, can handle up to 100A</p></li>
-<li><p>Simplified E2W/E3W AD-BMSE2E3WLC-SL baseboard + EVAL-ADBMS1816WLC daughterboard configuration</p></li>
+<li><p>Simplified E2W/E3W AD-BMSE2E3WLC-SL baseboard + EVAL-ADBMS1816WLC
+daughterboard configuration</p></li>
 </ul>
 </div></blockquote>
 <p><strong>Battery Chemistry Compatibility</strong></p>
 <blockquote>
 <div><ul class="simple">
 <li><p>Supports multiple battery chemistries: Ni-MH, Li-ion, LiFePO4,
-Sodium-Ion</p></li>
+Sodium-ion</p></li>
 </ul>
 </div></blockquote>
 <p><strong>System Integration</strong></p>
@@ -224,7 +225,7 @@ configurations</p></li>
 <p><strong>Monitoring Capabilities</strong></p>
 <blockquote>
 <div><ul class="simple">
-<li><p>Cell voltage accuracy: ±3.6mV</p></li>
+<li><p>Cell voltage accuracy: ±3.0mV</p></li>
 <li><p>Temperature monitoring: Up to 8 sensors</p></li>
 <li><p>SoC/SoH Coulomb counting</p></li>
 <li><p>High-side and low-side current sensing</p></li>
@@ -253,7 +254,7 @@ configurations</p></li>
 <blockquote>
 <div><ul class="simple">
 <li><p>Medium to High Performance Electric and Hybrid 2-Wheeler and 3-Wheeler Vehicles</p></li>
-<li><p>Light Electric Vehicles (LEVs)</p></li>
+<li><p>Light Electric Vehicles</p></li>
 <li><p>BMS Battery Research and Development</p></li>
 <li><p>Adaptive Battery Type System Monitoring</p></li>
 <li><p>Portable Energy Storage Systems</p></li>
@@ -276,10 +277,10 @@ configurations</p></li>
 sensing, temperature monitoring, charge/discharge control, and host
 communication into a scalable platform supporting battery packs from
 36V to 96V and up to 32 series-connected cells.</p>
-<p>At the core of the system is the <a class="icon adi reference external" href="https://www.analog.com/ADBMS1816W" target="_blank">ADBMS1816W</a> battery monitoring IC, which
-continuously measures individual cell voltages and temperature sensor
-inputs. Two <a class="icon adi reference external" href="https://www.analog.com/ADBMS1816W" target="_blank">ADBMS1816W</a> devices are used in a daisy-chain configuration
-to support up to 32 cells while maintaining high measurement accuracy
+<p>At the core of the system is the <a class="icon adi reference external" href="https://www.analog.com/ADBMS1816" target="_blank">ADBMS1816W</a> battery monitoring IC,
+which continuously measures individual cell voltages and temperature sensor
+inputs. Two <a class="icon adi reference external" href="https://www.analog.com/ADBMS1816" target="_blank">ADBMS1816W</a> devices are used in a daisy-chain
+configuration to support up to 32 cells while maintaining high measurement accuracy
 and reducing communication wiring complexity through the isoSPI
 interface. Measured battery parameters are transmitted to the host
 microcontroller for processing and display.</p>
@@ -303,7 +304,7 @@ load or charger. This allows implementation of vehicle operating modes
 such as Driving, Charging, Parking, and Fault conditions while
 protecting the battery pack from abnormal operating events.</p>
 <p>For evaluation purposes, the <a class="icon adi reference external" href="https://www.analog.com/AD-BMSE2E3WLC-SL" target="_blank">AD-BMSE2E3WLC-SL</a> can be connected to
-DC2472A battery emulators, allowing users to safely simulate battery
+<a class="icon adi reference external" href="https://www.analog.com/DC2472A" target="_blank">DC2472A</a> battery emulators, allowing users to safely simulate battery
 cell voltages and observe system behavior through the graphical user
 interface. The GUI provides real-time monitoring of cell voltages, stack
 voltage, current, temperature measurements, and system status,
@@ -616,11 +617,15 @@ board, and 1 microcontroller.</p>
 as intended for their application development.</strong></p>
 <blockquote>
 <div><ul class="simple">
-<li><p>1x AD-BMSE2E3WLC-48V Baseboard</p></li>
-<li><p>1x EVAL-ADBMS1816W Daughter Board</p></li>
-<li><p>1x MAX32666FTHR Microcontroller Board</p></li>
-<li><p>2x DC2472A Battery Emulator</p></li>
+<li><p>1x <a class="icon adi reference external" href="https://www.analog.com/AD-BMSE2E3WLC-48V" target="_blank">AD-BMSE2E3WLC-48V</a> Baseboard</p></li>
+<li><p>1x <a class="icon adi reference external" href="https://www.analog.com/EVAL-ADBMS1816WLC" target="_blank">EVAL-ADBMS1816WLC</a> Daughter Board</p></li>
+<li><p>1x <a class="icon adi reference external" href="https://www.analog.com/MAX32666FTHR" target="_blank">MAX32666FTHR</a> Microcontroller Board</p></li>
+<li><p>2x <a class="icon adi reference external" href="https://www.analog.com/DC2472A" target="_blank">DC2472A</a> Battery Emulator</p></li>
+<li><p>1x <a class="icon adi reference external" href="https://www.analog.com/MAX32625PICO" target="_blank">MAX32625PICO</a> Programmer with 10-pin SWD Ribbon Cable</p></li>
+<li><p>2x isoSPI Twisted Pair Cable</p></li>
 <li><p>2x USB Cable for PC Connection</p></li>
+<li><p>Stackable Banana Plug to Alligator Clip BU-P1166-12-0 (Black)</p></li>
+<li><p>Stackable Banana Plug to Alligator Clip BU-P1166-12-2 (Red)</p></li>
 </ul>
 </div></blockquote>
 <figure class="align-default" id="id4">
@@ -648,7 +653,7 @@ how to use the AD-BMSE2E3WLC-SL reference design:</p>
 <div><ul class="simple">
 <li><p><a class="icon adi reference external" href="https://www.analog.com/adbms1816" target="_blank">ADBMS1816 Product Page</a></p></li>
 <li><p><a class="icon adi reference external" href="https://www.analog.com/ltc7000" target="_blank">LTC7000 Product Page</a></p></li>
-<li><p><a class="icon adi reference external" href="https://www.analog.com/max32690" target="_blank">MAX32690 Product Page</a></p></li>
+<li><p><a class="icon adi reference external" href="https://www.analog.com/max32666" target="_blank">MAX32666 Product Page</a></p></li>
 <li><p><a class="icon adi reference external" href="https://www.analog.com/dc2472a" target="_blank">DC2472A Product Page</a></p></li>
 </ul>
 </div></blockquote>
